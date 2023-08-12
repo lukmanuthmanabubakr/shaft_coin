@@ -1,0 +1,32 @@
+.home-nav-compnents {
+  height: 125vh;
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    45deg,
+    #000000 0%,
+    #000000 25%,
+    #000000 51%,
+    #000000 100% 100%
+  );
+  animation: AnimeBg 10s ease infinite;
+  -webkit-animation: AnimeBg 10s ease infinite;
+}
+
+@keyframes AnimeBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* @media screen and (max-width: 1200px) {
+    .home-nav-compnents {
+        width: 80%;
+    }
+} */

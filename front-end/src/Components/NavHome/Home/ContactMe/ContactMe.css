@@ -1,0 +1,84 @@
+.smartMe {
+    background: white;
+    height: 40vh;
+}
+
+.smartMe .information{
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.smartMe .information .same {
+    color: #FFBF00;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.smartMe .information-today{
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.smartMe .information-today  .same {
+    color: #FFBF00;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.smartMe .ContactMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35rem;
+    color: #FFBF00;
+    margin-bottom: 3rem;
+    height: 1.3rem;
+    width: 8rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    padding: 0.8rem 1.3em;
+    border: 2px solid #FFBF00;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.smartMe .ContactMe::before {
+    content: "";
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #FFBF00;
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+  .smartMe .ContactMe:hover::before {
+    width: 100%;
+  }
+  .smartMe .ContactMe:hover {
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }

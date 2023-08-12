@@ -1,0 +1,186 @@
+.container {
+  height: 140vh;
+  background: black;
+  margin: 0;
+}
+
+.container .main {
+  position: absolute;
+  top: 20%;
+  left: 17%;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  background: #ffbf00;
+  width: 75vw;
+  border: 2px solid #ffbf00;
+}
+.container .main .pageMenu {
+}
+.container .main .profile {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 1.5rem;
+  margin-left: 4.5rem;
+
+}
+
+.container .main .profile .myAcct{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.container .main .profile img{
+    height: 7rem;
+    width: 7rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.container .main .profile .role{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.container .main .profile .role span{
+    color: white;
+    text-transform: uppercase;
+}
+.container .main .profile form .changePhoto{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.container .main .profile form .changePhoto label {
+  font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.container .main .profile form .name label {
+  font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.container .main .profile form .email label {
+  font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.container .main .profile form .num label {
+  font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.container .main .profile form .changePhoto input{
+  margin-left: 1.2rem;
+  border: none;
+}
+.container .main .profile form .name input{
+  margin-left: 1.2rem;
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.container .main .profile form .email input{
+  margin-left: 1.2rem;
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-top: 5px;
+  width: 20rem;
+}
+.container .main .profile form .num input{
+  margin-left: 1.2rem;
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-top: 5px;
+}
+
+.container .main .profile form .bio {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.container .main .profile form .bio label{
+  padding-bottom: 8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.container .main .profile form .bio textarea{
+ padding: 6px;
+ color: black;
+ margin-left: 1rem;
+}
+
+.container .main .profile form button{
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  cursor: pointer;
+  position: relative;
+  background: white;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  margin-bottom: 1rem;
+}
+
+.container .main .profile form button::before{
+  content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+.container .main .profile form button:hover::before{
+  transform: translateX(0);
+}
+.container .main .profile form button:hover{
+  color: #ffbf00;
+}

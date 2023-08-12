@@ -1,0 +1,62 @@
+.get-start{
+    height: 90vh;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color: white;
+    margin: 0;
+}
+
+.get-start .myNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.get-start .myNav select {
+    background: none;
+    color: white;
+    width: 1rem;
+}
+.get-start .myNav .select-option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+.get-start .myNav .select-option p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.get-start .myNav .select-option img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: none;
+}
+
+.get-start .myNav a{
+    display: flex;
+    align-items: center;
+}
+
+.get-start .myNav a img {
+    height: 2.5rem;
+  width: 2.5rem;
+}
+
+.get-start .myNav a .shaft{
+    color: white;
+    margin-left: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.get-start .myNav a .shaft span{
+    color: #ffbf00;
+  margin-left: 3px;
+  font-weight: 600;
+}

@@ -1,0 +1,165 @@
+.myFooter {
+  height: 60vh;
+  background: black;
+}
+.myFooter .footerStart article {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.myFooter .footerStart {
+  display: flex;
+  align-items: center;
+}
+.myFooter .footerStart p {
+  color: white;
+  margin-left: 4px;
+  font-size: 1.2rem;
+  user-select: none;
+}
+.myFooter .footerStart p span {
+  color: #ffbf00;
+  margin-left: 3px;
+  font-weight: 600;
+}
+
+.myFooter .footerStart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  background: transparent;
+  padding: 1.5rem 1rem;
+  top: 0;
+  /* background: #50C878; */
+  z-index: 999;
+}
+
+/*   
+    .navbar.active {
+      position: fixed;
+      right: 0;
+      left: 0;
+    background: rgba(11, 218, 81, 0.73);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    } */
+.myFooter .footerStart article img {
+  height: 2.5rem;
+  user-select: none;
+  width: 2.5rem;
+}
+.myFooter .footerStart .content {
+  margin-left: 2rem;
+}
+.myFooter .footerStart .language {
+  color: white;
+  margin-right: 3rem;
+}
+
+.myFooter .footerStart .shaftcoin {
+  color: whitesmoke;
+  padding-top: 1.5rem;
+  width: 35%;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.myFooter .footerStart .socials {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #ffbf00;
+  width: 105%;
+  
+}
+.myFooter .footerStart .socials a{
+  margin-bottom: 3rem;
+}
+.myFooter .footerStart .socials a .hub {
+  color: black;
+  padding: 5px;
+  background: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.myFooter .footerStart .socials a .hub:hover {
+  background: #28a745;
+  color: white;
+  height: 2rem;
+  width: 2rem;
+}
+
+.myFooter .footerStart .socials a .facebook {
+  color:  #1877F2;
+  background: white;
+  padding: 5px;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.myFooter .footerStart .socials a .facebook:hover {
+  background:  #1877F2;
+  color: white;
+}
+.myFooter .footerStart .socials a .twitter {
+  color:  dodgerblue;
+  padding: 5px;
+  background: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.myFooter .footerStart .socials a .twitter:hover {
+  background:  dodgerblue;
+  color: white;
+}
+.myFooter .footerStart .socials a .whatsapp {
+  color:  #25D366;
+  padding: 5px;
+  background: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.myFooter .footerStart .socials a .whatsapp:hover {
+  background: #25D366;
+  color: white;
+}

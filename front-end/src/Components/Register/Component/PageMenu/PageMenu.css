@@ -1,0 +1,26 @@
+.theNav{
+    display: grid;
+    background: black;
+    gap: 3rem;
+    border: none;
+    outline: none;
+    height: 80vh;
+    padding-top: 2rem;
+}
+.theNav  a{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  padding-left: 1.5rem;
+}
+.theNav a:hover{
+    color: #ffbf00;
+}
+.theNav a span{
+    padding-right: 6px;
+}

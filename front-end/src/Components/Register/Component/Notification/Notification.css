@@ -1,0 +1,38 @@
+.notification_pop {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  top: 2%;
+  left: 30%;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  -ms-border-radius: 2;
+  -o-border-radius: 2;
+  z-index: 1;
+}
+.notification_pop b {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: red;
+}
+.notification_pop .very {
+  color: whitesmoke;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.notification_pop .link{
+    color: rgb(176, 56, 56);
+}
+.notification_pop .link:hover {
+    color: red;
+}

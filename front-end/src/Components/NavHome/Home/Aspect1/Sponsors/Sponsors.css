@@ -1,0 +1,131 @@
+.mentors .mentors-description .mentors-description-content .content img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border: 3px solid #FFBF00;
+    opacity: -2rem;
+   background: white;
+   margin-left: 2rem;
+   margin-top: -1rem;
+}
+.mentors{
+  margin-top: -8.5rem;
+ 
+
+}
+.mentors .mentors-description {
+    background: hsla(0, 0%, 100%, 0.35);
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-border-radius: 1.3rem;
+    -moz-border-radius: 1.3rem;
+    -ms-border-radius: 1.3rem;
+    -o-border-radius: 1.3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+   
+    
+}
+.mentors .mentors-description .mentors-description-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15rem;
+    margin-top: -2rem;
+}
+.mentors .mentors-description .mentors-description-content .content .carrier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.7rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #343434;
+    margin-bottom: 1rem;
+    margin-top: 5px;
+
+}
+
+
+.mentors .mentors-description .mentors-description-content .content h1{
+    /* display: flex;
+    font-size: 1.5rem;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: white;
+    justify-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 8px;
+}
+
+.mentors .mentors-description .mentors-description-content .star{
+
+}
+
+.mentors .mentors-description .mentors-description-content .star h1{
+    /* color: white; */
+    color: #FFBF00;
+    font-size: 4rem;
+    margin-left: 6rem;
+   
+}
+.mentors .mentors-description .mentors-description-content .star img{
+    
+}
+.mentors .mentors-description{
+    display: inline-block;
+
+}
+.mentors .mentors-description .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.7rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #343434;
+    margin-bottom: 1rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .navigation{
+    --swiper-navigation-color: "#000";
+    --swiper-navigation-size: "25px";
+    
+  }
+  
+  /* .swiper-slide {
+    /* text-align: center;
+    font-size: 1px; */
+    /* background: #fff; */
+  
+    /* Center slide text vertically */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  
+
+  .swiper-slide img {
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+  }
+  

@@ -1,0 +1,118 @@
+.aboutSecTwo {
+  margin-left: 8rem;
+  margin-right: 5rem;
+}
+.aboutSecTwo h1 {
+  padding-top: 3rem;
+  color: #ffbf00;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.aboutSecTwo a{
+  margin-bottom: 5rem;
+  height: 1.3rem;
+  width: 8rem;
+  cursor: pointer;
+  padding: 0.8rem 1.3em;
+  border: 2px solid #ffbf00;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  color: black;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  position: absolute;
+  left: 40%;
+  top: 420%;
+}
+.aboutSecTwo a::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ffbf00;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+}
+.aboutSecTwo a:hover::before {
+  width: 100%;
+}
+.aboutSecTwo a:hover {
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.aboutSecTwo .management{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.aboutSecTwo .management .managerProfile img {
+  height: 6rem;
+  width: 5rem;
+  border: 4px solid #ffbf00;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+.aboutSecTwo .management .managerProfile {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.aboutSecTwo .management .managerProfile .userName {
+  margin-left: -13rem;
+}
+.aboutSecTwo .management .managerProfile .userName .nameUser {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.aboutSecTwo .management .managerProfile .userName .post {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.aboutSecTwo .management .managerProfile .userName div {
+  display: flex;
+  gap: 7px;
+}
+.aboutSecTwo .management .managerProfile .userName .space {
+  border: 1px solid #ffbf00;
+  height: 0px;
+  margin-top: 10px;
+  width: 2rem;
+}
+.aboutSecTwo .management .managerProfile .userName .location {
+  font-size: 1.3rem;
+  color: #343a40;
+  font-weight: 300;
+}
+.aboutSecTwo .management ul {
+  margin-left: 1rem;
+  color: #ffbf00;
+  margin-top: 1rem;
+}

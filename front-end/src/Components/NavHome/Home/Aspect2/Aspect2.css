@@ -1,0 +1,116 @@
+.Aspect2 {
+  background: white;
+  height: 90vh;
+  margin-top: 5rem;
+}
+.Aspect2 h1 {
+  margin-left: 10rem;
+  font-size: 3rem;
+  user-select: none;
+}
+.Aspect2 .Aspect2-send {
+  margin-bottom: 4rem;
+}
+.Aspect2 span {
+  color: #ffbf00;
+}
+
+.Aspect2 .crypto {
+  margin-top: 1rem;
+  margin-left: -1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contents {
+  margin: 1rem 2rem 3rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+}
+
+.contents .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.contents .split .icon {
+  background: black;
+  height: 3rem;
+  width: 3rem;
+  color: #ffbf00;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  align-items: center;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.contents .innerContent {
+  margin-left: -15rem;
+}
+.contents .innerContent .content-innerContent {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #1b1212;
+  text-transform: capitalize;
+}
+
+.contents .innerContent .aspect {
+  color: #333533;
+}
+.Aspect2 .get-start {
+  margin-bottom: 3rem;
+  height: 1.3rem;
+  width: 8rem;
+  cursor: pointer;
+  padding: 0.8rem 1.3em;
+  border: 2px solid #ffbf00;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  color: black;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  position: absolute;
+  left: 80%;
+  top: 240%;
+}
+.Aspect2 .get-start::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ffbf00;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+.Aspect2 .get-start:hover::before {
+  width: 100%;
+}
+.Aspect2 .get-start:hover {
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}

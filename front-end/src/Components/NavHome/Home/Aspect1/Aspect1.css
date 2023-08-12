@@ -1,0 +1,96 @@
+.Aspect-1-section{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.Aspect-1-section .Aspect-1-section-intro{
+    padding: 4rem;
+    flex-wrap: wrap;
+}
+
+.Aspect-1-section .Aspect-1-section-intro .intese_content {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    user-select: none;
+}
+.Aspect-1-section .Aspect-1-section-intro .intese_content span {
+    color: #FFBF00;
+}
+
+.Aspect-1-section .Aspect-1-section-intro .get-start{
+    margin-bottom: 2rem;
+    padding: 0.8rem 1.3em;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s; 
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.Aspect-1-section .Aspect-1-section-intro .get-start::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: 1rem;
+    width: 3rem;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #FFBF00;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.Aspect-1-section .Aspect-1-section-intro .get-start:hover::before{
+    scale: 3;
+}
+.Aspect-1-section .Aspect-1-section-intro .get-start:hover{
+    color: #ffff;
+    border: 2px solid #FFBF00;
+    scale: 1.1;
+    box-shadow: #dbdad6 0px 2px 8px 0px;
+}
+
+.Aspect-1-section .Aspect-1-section-intro .get-start:active{
+    scale: 1;
+}
+
+
+.Aspect-1-section .Aspect-1-section-intro .intese_content-2 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.1rem;
+    width: 68%;
+    user-select: none;
+}
+.Aspect-1-section .Aspect-1-section-quicky{
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid white;
+margin-right: 3rem;
+width: 65%;
+height: 60vh;
+margin-top: 5rem;
+}

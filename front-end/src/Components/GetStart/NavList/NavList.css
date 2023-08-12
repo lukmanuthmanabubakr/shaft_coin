@@ -1,0 +1,8 @@
+.navList{
+    margin-top: 2rem;
+}
+.navList ul {
+    list-style-type: none;
+    display: grid;
+    gap: 4rem;
+}
