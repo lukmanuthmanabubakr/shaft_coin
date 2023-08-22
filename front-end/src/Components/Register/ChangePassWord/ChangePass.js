@@ -44,9 +44,9 @@ const ChangePassword = () => {
     };
 
     const emailData = {
-      subject: "Password Changed - AUTH:Z",
+      subject: "Password Changed - Shaft-coin",
       send_to: user.email,
-      reply_to: "noreply@zinotrustacademy.com",
+      reply_to: "noreply@lukmanuthman135@gmail.com",
       template: "changePassword",
       url: "/forgot",
     };

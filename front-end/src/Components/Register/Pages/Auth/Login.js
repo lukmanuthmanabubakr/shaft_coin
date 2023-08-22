@@ -12,7 +12,6 @@ import Mode from "../../../Mode/Mode";
 import google_btn from "../../../../Asset/gog.png";
 
 const initialState = {
-  name: "",
   email: "",
   password: "",
 };
@@ -31,7 +30,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isLoading, isLoggedIn, isSuccess, message } = useSelector(
+  const { isLoggedIn, isSuccess, } = useSelector(
     (state) => state.auth
   );
 
@@ -68,11 +67,6 @@ const Login = () => {
     navigate("/");
   };
 
-
-  if(!handleInputChange && loginUser){
-    return toast.error("Please select")
-  }
-  
 
   return (
     <div className="loginAspect">

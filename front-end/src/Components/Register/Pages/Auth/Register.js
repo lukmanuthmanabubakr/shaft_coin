@@ -17,12 +17,12 @@ const initialState = {
   name: "",
   email: "",
   password: "",
-  confird_pwd: "",
+  confirm_pwd: "",
 };
 
 const Register = () => {
   const [formData, setFormData] = useState(initialState);
-  const { name, email, password, confird_pwd } = formData;
+  const { name, email, password, confirm_pwd } = formData;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -90,7 +90,7 @@ const Register = () => {
     if (!validateEmail(email)) {
       return toast.error("Please enter a valid email");
     }
-    if (password !== confird_pwd) {
+    if (password !== confirm_pwd) {
       return toast.error("Passwords do not match");
     }
 
@@ -151,8 +151,8 @@ const Register = () => {
              <label>Confirm Password</label>
             <PasswordInput
               placeholder="Confirm Password"
-              name="confird_pwd"
-              value={confird_pwd}
+              name="confirm_pwd"
+              value={confirm_pwd}
               onChange={handleInputChange}
               onPaste={(e) => {
                 e.preventDefault();

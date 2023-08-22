@@ -53,6 +53,7 @@ const sendVerificationEmail = async () => {
 //Verify user
 const verifyUser = async (verificationToken) => {
     const response = await axios.patch(`${API_URL}verifyUser/${verificationToken}`);
+    console.log(response);
 
     return response.data.message;
 }
@@ -65,6 +66,28 @@ const changePassword = async (userData) => {
     return response.data.message;
 }
 
+
+//forgot password
+const forgotPassword = async (userData) => {
+    const response = await axios.post(API_URL + "forgotPassword", userData);
+
+    return response.data.message;
+}
+
+//Reset password
+const resetPassword = async (userData, resetToken) => {
+    const response = await axios.patch(`${API_URL}resetPassword/${resetToken}` , userData);
+
+    return response.data.message;
+}
+
+//get users
+const getUsers = async () => {
+    const response = await axios.get(API_URL + "getUsers");
+
+    return response.data;
+}
+
 const AuthService = {
     register,
     login,
@@ -74,7 +97,10 @@ const AuthService = {
     updateUser,
     sendVerificationEmail,
     verifyUser,
-    changePassword
+    changePassword,
+    forgotPassword,
+    resetPassword,
+    getUsers
 }
 
 

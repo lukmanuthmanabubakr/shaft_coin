@@ -6,11 +6,12 @@ import { useParams } from 'react-router-dom';
 
 const Verify = () => {
   const dispatch = useDispatch();
-  const {vericationToken} = useParams()
+  const {verificationToken} = useParams()
+  console.log(verificationToken);
 
   
   const verifyAccount = async () => {
-    await dispatch(verifyUser(vericationToken))
+    await dispatch(verifyUser(verificationToken))
     await dispatch(RESET())
   }
   return (

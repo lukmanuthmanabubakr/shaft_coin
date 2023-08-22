@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 const User = require("../Models/UserModel");
 const jwt = require("jsonwebtoken");
 
+
 const protect = asyncHandler(async (req, res, next) => {
   try {
     const token = req.cookies.token;
@@ -12,7 +13,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
     //verify token
     const verified = jwt.verify(token, process.env.JWT_SECRET);
-    //get User Id from Token
+    //generate User Id from the token
     const user = await User.findById(verified.id).select("-password");
 
     if (!user) {
@@ -30,6 +31,18 @@ const protect = asyncHandler(async (req, res, next) => {
     res.status(401);
     throw new Error("Not authorized, please Login");
   }
+  
+
+});
+
+
+const verifiedOnly = asyncHandler(async (req, res, next) => {
+  if (req.user && req.user.isVerified) {
+    next();
+  } else {
+    res.status(401);
+    throw new Error("Account not verified");
+  }
 });
 
 const authorOnly = asyncHandler(async (req, res, next) => {
@@ -41,14 +54,6 @@ const authorOnly = asyncHandler(async (req, res, next) => {
   }
 });
 
-const verifiedOnly = asyncHandler(async (req, res, next) => {
-  if (req.user && req.user.isVerified) {
-    next();
-  } else {
-    res.status(401);
-    throw new Error("Account not verified");
-  }
-});
 
 const adminOnly = asyncHandler(async (req, res, next) => {
   if (req.user && req.user.role === "admin") {

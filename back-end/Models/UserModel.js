@@ -7,11 +7,11 @@ const userSchema = mongoose.Schema(
     {
         name: {
             type: String,
-            required:[ true, "Please Add A name"]
+            required:[ true, "Please Input A name"]
         },
         email: {
             type: String,
-            required:[ true, "Add an Email"],
+            required:[ true, "Input an Email"],
             unique: true,
             trim: true,
             match: [
@@ -21,11 +21,11 @@ const userSchema = mongoose.Schema(
         },
         password: {
             type: String,
-            required:[ true, "Please Add A Password"]
+            required:[ true, "Please Input A Password"]
         },
         photo: {
             type: String,
-            required:[ true, "Please Add A Photo"],
+            required:[ true, "Please Input A Photo"],
             default: "https://tinyurl.com/y83z2aba"
         },
         phoneNumber: {

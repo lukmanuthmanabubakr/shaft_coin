@@ -6,3 +6,27 @@
     display: grid;
     gap: 4rem;
 }
+.navList ul li a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.navList ul li a span{
+    color: #ffbf00;
+    padding-right: 8px;
+}
+.navList .contact a{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top: 13rem;
+    
+}
+.navList .contact a span{
+    color: #ffbf00;
+    padding-right: 8px;
+}

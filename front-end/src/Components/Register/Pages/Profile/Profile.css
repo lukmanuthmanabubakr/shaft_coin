@@ -133,6 +133,7 @@
  padding: 6px;
  color: black;
  margin-left: 1rem;
+ resize: none;
 }
 
 .container .main .profile form button{

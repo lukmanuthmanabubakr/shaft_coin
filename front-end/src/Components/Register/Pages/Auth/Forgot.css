@@ -1,0 +1,139 @@
+.forgotPass {
+  margin: 0;
+  background: black;
+  height: 100vh;
+}
+
+.forgotPass .container {
+  background: #ffbf00;
+  position: absolute;
+  top: 30%;
+  height: 45%;
+  width: 40%;
+  padding-top: 1rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  left: 30%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.forgotPass .container .myPass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.forgotPass .container .email {
+  color: black;
+  margin-left: 15rem;
+}
+
+.forgotPass .container form {
+  display: grid;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.forgotPass .container form label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 5px;
+}
+.forgotPass .container form input {
+  padding: 8px;
+  height: 1.5rem;
+  font-size: 16px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  background: white;
+  font-weight: 500;
+}
+
+.forgotPass .container form .submit {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  cursor: pointer;
+  position: relative;
+  background: white;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  margin-top: 2rem;
+}
+
+.forgotPass .container form .submit::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+
+.forgotPass .container form .submit:hover::before {
+  transform: translateX(0);
+}
+.forgotPass .container form .submit:hover {
+  color: #ffbf00;
+}
+
+.forgotPass .container .myHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+
+.forgotPass .container .myHome a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.forgotPass .container .myHome a:hover {
+  color: black;
+}
+
+.forgotPass .container .myHome .reg a {
+  padding-left: 5px;
+}

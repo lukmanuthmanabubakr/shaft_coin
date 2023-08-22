@@ -9,6 +9,7 @@ import { ShowOnLogIn } from "../Register/Component/Protect/HiddenLink";
 import { UserName } from "../Register/Pages/Profile/Profile";
 import { useSelector } from "react-redux";
 import NavList from "./NavList/NavList";
+import DashBoard from "./Work/DashBoard/DashBoard";
 
 
 const GetStart = () => {
@@ -39,7 +40,7 @@ const GetStart = () => {
           </p>
         </NavLink>
 
-        <p>Home</p>
+        <p className="home">Home</p>
         <div
           className="select-option"
           onClick={() => setOpenProfile((prev) => !prev)}
@@ -61,7 +62,10 @@ const GetStart = () => {
         </div>
       </div>
 
+      <div className="container">
       <NavList/>
+      <DashBoard/>
+      </div>
     </section>
   );
 };

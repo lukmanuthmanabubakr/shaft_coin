@@ -261,11 +261,11 @@ const sendVerificationEmail = asyncHandler(async (req, res) => {
     expiresAt: Date.now() + 60 * (60 * 1000), //60 mins
   }).save();
 
-  //construct verification url
+  //form a verification url
   const verificationUrl = `${process.env.FRONTEND_URL}/verify/${verificationToken}`;
 
   //send email
-  const subject = "Verify Your Account - Practicecoin";
+  const subject = "Verify Your Account - shaftCoin";
   const send_to = user.email;
   const sent_from = process.env.EMAIL_USER;
   const reply_to = "noreply@abu.com";
@@ -295,6 +295,7 @@ const sendVerificationEmail = asyncHandler(async (req, res) => {
 //verify user
 const verifyUser = asyncHandler(async (req, res) => {
   const { verificationToken } = req.params;
+  console.log(verificationToken);
 
   const hashedToken = hashToken(verificationToken);
 
@@ -356,10 +357,10 @@ const forgotPassword = asyncHandler(async (req, res) => {
   }).save();
 
   //construct reset url
-  const resetUrl = `${process.env.FRONTEND_URL}/reset_password/${resetToken}`;
+  const resetUrl = `${process.env.FRONTEND_URL}/resetPassword/${resetToken}`;
 
   //send email
-  const subject = "Password Reset Request - Practicecoin";
+  const subject = "Password Reset Request - ShaftCoin";
   const send_to = user.email;
   const sent_from = process.env.EMAIL_USER;
   const reply_to = "noreply@abu.com";

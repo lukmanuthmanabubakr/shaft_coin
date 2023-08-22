@@ -1,0 +1,117 @@
+.resetPass{
+    margin: 0;
+}
+.resetPass .myReset {
+    background: #ffbf00;
+    position: absolute;
+    top: 20%;
+    height: 55%;
+    width: 40%;
+    padding-top: 1rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    left: 30%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  .resetPass .myReset .reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .resetPass .myReset form {
+    display: grid;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  }
+  .resetPass .myReset form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 5px;
+  }
+
+  
+  .resetPass .myReset form .submit {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    margin-top: 1rem;
+  }
+  
+    .resetPass .myReset form .submit::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+  
+    .resetPass .myReset form .submit:hover::before {
+    transform: translateX(0);
+  }
+    .resetPass .myReset form .submit:hover {
+    color: #ffbf00;
+  }
+  
+  .resetPass .myReset .myHome {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.2rem;
+  }
+  
+  
+  .resetPass .myReset .myHome a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+  }
+  .resetPass .myReset .myHome a:hover {
+    color: black;
+  }
+  

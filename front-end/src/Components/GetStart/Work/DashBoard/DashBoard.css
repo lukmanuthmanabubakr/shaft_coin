@@ -1,0 +1,11 @@
+.my_dash{
+    height: 40%;
+}
+
+.dashBoard{
+    color: white;
+    border: 2px solid #ffbf00;
+    height: 80vh;
+    margin-top: 1.5rem;
+    background: #FAF9F6;
+}

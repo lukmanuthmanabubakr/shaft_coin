@@ -106,23 +106,7 @@
   margin-bottom: 1rem;
   background: white;
 }
-.loginAspect .loginContainer form .pass_input input {
-  /* margin-top: 5px;
-    padding-top: 4px;
-    padding-left: 7px;
-    padding-bottom: 4px;
-    padding-right: 7px;
-    height: 1.5rem;
-    width: 87%;
-    font-size: 1rem;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
-    margin-bottom: 1rem; */
-}
+
 
 .loginAspect .loginContainer form .submit {
   display: inline-block;
