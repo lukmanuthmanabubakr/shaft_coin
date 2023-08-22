@@ -21,6 +21,7 @@ import Wallet from "./Components/Register/Wallet/Wallet";
 import { useDispatch, useSelector } from "react-redux";
 import { getLoginStatus, getUser, selectIsLoggedIn, selectUser } from "./Components/Register/Redux/Features/Auth/authSlice";
 import ChangePassword from "./Components/Register/ChangePassWord/ChangePass";
+import UserList from "./Components/Register/Pages/UserList/UserList";
 
 
 axios.defaults.withCredentials = true;
@@ -70,6 +71,7 @@ function App() {
           <Route path="/verify/:verificationToken" element={<Verify />} />
           <Route path="/resetPassword/:resetToken" element={<Reset />} />
           <Route path="/changepassword" element={<ChangePassword/>} />
+          <Route path="/user" element={<UserList/>} />
           <Route path="/loginwithcode/:email" element={<LoginWithCode />} />
         </Routes>
       )}
