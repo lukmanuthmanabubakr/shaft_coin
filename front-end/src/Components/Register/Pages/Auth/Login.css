@@ -107,7 +107,6 @@
   background: white;
 }
 
-
 .loginAspect .loginContainer form .submit {
   display: inline-block;
   padding-top: 10px;
@@ -161,10 +160,20 @@
 }
 
 .loginAspect .loginContainer .forgot-pass {
-  color: white;
-position: absolute;
-top: 67%;
- margin-bottom: 5rem;
+  color: black;
+  position: absolute;
+  top: 64%;
+  margin-bottom: 5rem;
+  font-weight: 400;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.loginAspect .loginContainer .forgot-pass:hover{
+  border-bottom: 1px solid black;
 }
 
 .loginAspect .loginContainer .home-reg {
@@ -178,6 +187,11 @@ top: 67%;
   font-size: 1rem;
   font-weight: 600;
   color: white;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
 }
 .loginAspect .loginContainer .home-reg a:hover {
   color: black;
@@ -194,7 +208,7 @@ top: 67%;
 }
 
 .pass_temp {
-    margin-top: 8px;
+  margin-top: 8px;
   display: flex;
   align-items: center;
   background: white;
@@ -211,7 +225,6 @@ input {
   font-size: 20px;
   background: transparent;
   letter-spacing: 1px;
-  
 }
 
 .icon {
@@ -222,6 +235,12 @@ input {
 .icon {
   vertical-align: middle;
   color: #888;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  
 }
 
 /* Style for the eye icons on hover */

@@ -436,7 +436,7 @@ const getUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
-    const { _id, name, email, phoneNumber, bio, photo, isVerified } = user;
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } = user;
 
     res.status(200).json({
       _id,
@@ -445,6 +445,7 @@ const getUser = asyncHandler(async (req, res) => {
       phoneNumber,
       bio,
       photo,
+      role,
       isVerified,
     });
   } else {
@@ -492,14 +493,14 @@ const updateUser = asyncHandler(async (req, res) => {
 const deleteUser = asyncHandler(async (req, res) => {
   // res.send("delete user")
 
-  const user = User.findById(req.params.id);
+  const user = await User.findByIdAndRemove(req.params.id);
 
   if (!user) {
     res.status(404);
     throw new Error("User not found");
   }
 
-  // (await user.remove());
+  // await user.remove()
   res.status(200).json({ message: "User deleted successfully" });
 });
 //get user

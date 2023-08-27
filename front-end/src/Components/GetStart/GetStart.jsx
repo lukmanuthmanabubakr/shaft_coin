@@ -10,9 +10,11 @@ import { UserName } from "../Register/Pages/Profile/Profile";
 import { useSelector } from "react-redux";
 import NavList from "./NavList/NavList";
 import DashBoard from "./Work/DashBoard/DashBoard";
+import UseRedirectLogOutUser from "../Register/Component/customHook/UseRedirectLogOutUser";
 
 
 const GetStart = () => {
+  UseRedirectLogOutUser("/login");
   const [openProfile, setOpenProfile] = useState(false);
   const { user } = useSelector(
     (state) => state.auth

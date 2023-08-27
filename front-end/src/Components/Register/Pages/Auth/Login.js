@@ -117,7 +117,7 @@ const Login = () => {
           </button>
         </form>
         <NavLink to="/forgot" className="forgot-pass">
-          forgot pasword....?
+          forgot pasword...
         </NavLink>
         <p className="home-reg">
           <span className="home">
@@ -125,7 +125,7 @@ const Login = () => {
           </span>
           <span className="reg">
             Don't have an account
-            <NavLink to="/register">Register</NavLink>
+            <NavLink to="/register">Register?</NavLink>
           </span>
         </p>
       </div>

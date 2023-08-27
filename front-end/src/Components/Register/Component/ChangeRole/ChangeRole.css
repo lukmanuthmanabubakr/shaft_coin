@@ -1,0 +1,61 @@
+.sort form{
+    display: flex;
+    align-items: center;
+}
+
+.sort form button{
+    cursor: pointer;
+    padding: 8px;
+    background: #50C878;
+    color: white;
+    margin-left: 3px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  /* Style the select element when it's focused */
+  select:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Style the option elements */
+  select option {
+    padding: 8px;
+  }
+  
+  /* Style the placeholder option */
+  select option[value=""] {
+    color: #999;
+  }
+  
+  /* Style specific options */
+  select option[value="subscriber"] {
+    background-color: #e6f7e9;
+  }
+  
+  select option[value="author"] {
+    background-color: #e0f2f9;
+  }
+  
+  select option[value="admin"] {
+    background-color: #f8d7da;
+  }
+  
+  select option[value="suspended"] {
+    background-color: #fff3cd;
+  }
+  
+  select option.whitesmoke-bg {
+    background-color: whitesmoke;
+    border: none;
+  }

@@ -257,6 +257,47 @@ export const getUsers = createAsyncThunk(
 
 
 
+//delete Users
+export const deleteUser = createAsyncThunk(
+  "auth/deleteUser",
+  async (id, thunkAPI) => {
+    try {
+      return await AuthService.deleteUser(id);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+
+//delete Users
+export const upgradeUser = createAsyncThunk(
+  "auth/upgradeUser",
+  async (userData, thunkAPI) => {
+    try {
+      return await AuthService.upgradeUser(userData);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+
+
 
 
 
@@ -271,6 +312,36 @@ const authSlice = createSlice({
       state.isLoading = false;
       state.message = "";
     },
+    CALC_VERIFIED_USER(state, action) {
+      const array = []
+      state.user.map((user) => {
+        const { isVerified } = user;
+        return array.push(isVerified)
+      })
+      let count = 0
+      array.forEach((item) => {
+        if(item === true) {
+          count += 1  
+        }
+      })
+
+      state.verifiedUsers = count
+    },
+    CALC_SUSPENDED_USER(state, action) {
+      const array = []
+      state.user.map((user) => {
+        const { role } = user;
+        return array.push(role)
+      })
+      let count = 0
+      array.forEach((item) => {
+        if(item === "suspended") {
+          count += 1  
+        }
+      })
+
+      state.suspendedUsers = count
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -476,6 +547,38 @@ const authSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         toast.error(action.payload)
+      })
+      //delete Users
+      .addCase(deleteUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(deleteUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.message = action.payload;
+        toast.success(action.payload)
+      })
+      .addCase(deleteUser.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        toast.error(action.payload);
+      })
+      //upgrade Users
+      .addCase(upgradeUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(upgradeUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.message = action.payload;
+        toast.success(action.payload)
+      })
+      .addCase(upgradeUser.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        toast.error(action.payload);
       })
 
   },

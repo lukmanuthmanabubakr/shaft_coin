@@ -1,0 +1,23 @@
+.info-summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-summary .statsUser{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    
+}
+.card1{
+    background: #FF5F1F;
+}
+.card2{
+    background: #0BDA51;
+}
+.card3{
+    background: #4169E1;
+}
+.card4{
+    background: #D2042D;
+}

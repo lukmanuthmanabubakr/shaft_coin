@@ -1,0 +1,21 @@
+.search_users{
+    background: whitesmoke;
+    border: 2px solid #ffbf00;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+}
+.search_users .input{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.search_users .search{
+padding-top: 5px;
+cursor: pointer;
+}

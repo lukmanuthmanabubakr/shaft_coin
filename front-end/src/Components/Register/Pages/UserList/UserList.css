@@ -1,0 +1,127 @@
+.userList{
+    background: black;
+    height: 100vh;
+    margin: 0;
+}
+.userList .users{
+  position: absolute;
+  top: 15%;
+  left: 14%;
+  background: #ffbf00;
+  width: 75vw;
+  border: 2px solid #ffbf00;
+  padding: 1rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.userList .users .user-list{
+  /* background: rgb(57, 56, 56); */
+  background: #ddd;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.userList .users .user-list .all-users{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #ffbf00;
+  border-bottom: 2px solid #ffbf00;
+  padding: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.userList .users .user-list .all-users span .all-user{
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Apply some basic styling to the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+tbody tr {
+  border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+td .trash{
+  cursor: pointer;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+.FaTrash {
+  cursor: pointer;
+}
+
+.ChangeRole {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.page-num {
+  margin: 0 8px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 2px solid #50C878;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.page-num.previous, .page-num.next {
+  font-weight: bold;
+}
+
+
+.activePage {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-num.break {
+  font-weight: bold;
+}
+

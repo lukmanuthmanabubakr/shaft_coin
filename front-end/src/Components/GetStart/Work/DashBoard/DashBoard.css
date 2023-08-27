@@ -8,4 +8,34 @@
     height: 80vh;
     margin-top: 1.5rem;
     background: #FAF9F6;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
+.dashBoard .welcome{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.dashBoard .currency{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.dashBoard .currency .note{
+    color: #343434;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.dashBoard .currency .amount{
+    color: #343434;
+    font-size: 3rem;
+    font-weight: 500;
+    padding-left: 5px;
+    padding-bottom: 1.1rem;
+}
+
