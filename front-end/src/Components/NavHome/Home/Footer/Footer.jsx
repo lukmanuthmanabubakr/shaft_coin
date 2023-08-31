@@ -9,7 +9,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="myFooter">
-      <div className="footerStart">
+      <div className="footerStart" data-aos="fade-up">
         <div className="content">
           <article>
             <img src={Logo} alt="bird" />
@@ -17,12 +17,15 @@ const Footer = () => {
               Shaft<span>Coin</span>
             </p>
           </article>
-          <p className="shaftcoin">
+        <div data-aos="zoom-in">
+        <p className="shaftcoin">
             Shaft Coin is a payment solutions provider that seamlessly connects
             fiat and crypto economies for global consumers, merchants,
             developers, and institutions.
           </p>
-          <div className="socials">
+        </div>
+
+          <div className="socials" data-aos="zoom-in-down">
             <NavLink
               className="github"
               to="https://github.com/lukmanuthmanabubakr/shaft-soin"

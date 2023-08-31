@@ -1,4 +1,4 @@
-.aboutSecTwo {
+/* .aboutSecTwo {
   margin-left: 8rem;
   margin-right: 5rem;
 }
@@ -90,11 +90,13 @@
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 4px;
+  margin-left: 1.5rem;
 }
 .aboutSecTwo .management .managerProfile .userName .post {
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 1rem;
+  margin-left: 1.5rem;
 }
 .aboutSecTwo .management .managerProfile .userName div {
   display: flex;
@@ -105,6 +107,7 @@
   height: 0px;
   margin-top: 10px;
   width: 2rem;
+  margin-left: 1.5rem;
 }
 .aboutSecTwo .management .managerProfile .userName .location {
   font-size: 1.3rem;
@@ -115,4 +118,6 @@
   margin-left: 1rem;
   color: #ffbf00;
   margin-top: 1rem;
-}
+} */
+
+

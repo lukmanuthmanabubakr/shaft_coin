@@ -31,7 +31,7 @@
   position: absolute;
   top: 20%;
   height: 70%;
-  width: 40%;
+  width:45%;
   padding-top: 1rem;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
@@ -162,7 +162,7 @@
 .loginAspect .loginContainer .forgot-pass {
   color: black;
   position: absolute;
-  top: 64%;
+  top: 70%;
   margin-bottom: 5rem;
   font-weight: 400;
   transition: all 400ms ease;
@@ -180,7 +180,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .loginAspect .loginContainer .home-reg a {
@@ -247,3 +247,9 @@ input {
 .icon:hover {
   color: #333;
 }
+/* 
+@media (max-width: 320px){
+  .loginAspect {
+    display: block;
+  }
+} */

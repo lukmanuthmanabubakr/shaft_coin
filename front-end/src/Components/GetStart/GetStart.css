@@ -1,10 +1,11 @@
 .get-start{
-    height: 90vh;
+    height: 100vh;
     padding-top: 2rem;
     padding-left: 5rem;
     padding-right: 5rem;
     color: white;
     margin: 0;
+    background: black;
 }
 
 .get-start .myNav{

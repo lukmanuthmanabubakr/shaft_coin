@@ -3,11 +3,10 @@ import "./ChangeRole.css";
 import { FaCheck } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-// import { getUsers, upgradeUser } from "../../redux/features/auth/authSlice";
 import { EMAIL_RESET, sendAuthomatedEmail } from "../../Redux/Email/EmailSlice";
 import { getUsers, upgradeUser } from "../../Redux/Features/Auth/authSlice";
 
-const ChangeRole = ({ _id, email }) => {
+const ChangeRole = ({_id, email }) => {
   const [userRole, setUserRole] = useState("");
   const dispatch = useDispatch();
 
@@ -28,7 +27,7 @@ const ChangeRole = ({ _id, email }) => {
       subject: "Account Role Changed - ShaftCoin",
       send_to: email,
       reply_to: "123@gmail.com",
-      template: "Upgradeuser",
+      template: "upgradeuser",
       url: "/login",
     };
 

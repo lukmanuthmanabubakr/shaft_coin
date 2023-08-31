@@ -3,7 +3,6 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import "./UserList.css";
 import ReactPaginate from "react-paginate";
-import PageMenu from "../../Component/PageMenu/PageMenu";
 import UserStats from "../UserStats/UserStats";
 import Search from "../../Component/Search/Search";
 import { FaTrash } from "react-icons/fa";
@@ -55,7 +54,7 @@ const UserList = () => {
   }, [dispatch, users, search]);
 
   //start pagination
-  const itemsPerPage = 4;
+  const itemsPerPage = 3;
 
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;

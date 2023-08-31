@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { RESET, verifyUser } from '../../Redux/Features/Auth/authSlice';
 import { useParams } from 'react-router-dom';
+import "./Verify.css"
 
 
 const Verify = () => {
@@ -15,12 +16,12 @@ const Verify = () => {
     await dispatch(RESET())
   }
   return (
-    <section>
-        <div>
-            <h2>Account Verification</h2>
-            <p>To verify your account , click the button below</p>
-            <button className='btn-primary' onClick={verifyAccount}>
-                Verify Account
+    <section className='verify_us'>
+        <div className='users'  >
+            <p className='acct'>Account Verification</p>
+            <p className='acct_bellow'>To verify your account , click the button below</p>
+            <button className='btn-primary type1' onClick={verifyAccount}>
+                
             </button>
         </div>
     </section>

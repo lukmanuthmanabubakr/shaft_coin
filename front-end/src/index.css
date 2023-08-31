@@ -42,10 +42,3 @@ img{
   user-select: none;
 }
 
-
-@media(max-width: 1200px) {
-  /* body{
-    width: 93%;
-    overflow-x: hidden;
-  } */
-}

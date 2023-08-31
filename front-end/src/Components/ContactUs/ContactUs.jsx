@@ -25,19 +25,6 @@ const ContactUs = () => {
   };
 
   const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      "service_3oo5vin",
-      "template_ri0ao0h",
-      form.current,
-      "HVqXGdPVDe0II42XK"
-    );
-
-    e.target.reset();
-  };
   const [countryState, setCountryState] = useState({
     loading: false,
     countries: [],
@@ -113,7 +100,7 @@ const ContactUs = () => {
         <h1 className="tense">Contact Us</h1>
 
         <div className="mainInbox">
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form}>
             <div className="inboxTwo">
               <div className="inboxTwo_1">
                 <label>First Name:</label>

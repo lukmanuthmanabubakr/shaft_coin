@@ -4,6 +4,7 @@ import Navbar from '../NavHome/Navbar/Navbar'
 import AboutSecTwo from './AboutSecTwo/AboutSecTwo'
 import Footer from '../NavHome/Home/Footer/Footer'
 import BackToTopButton from "../BackToTopButton"
+import AboutSecThree from './AboutSecThree/AboutSecThree'
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
       <Navbar/>
       <AboutSecOne/>
       <AboutSecTwo/>
+      <AboutSecThree/>
       <Footer/>
       <BackToTopButton/>
     </>

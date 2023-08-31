@@ -128,17 +128,21 @@ const data = [
 ]
 
 const UseCase = () => {
+
   return (
+    
     <section className='useCase'>
+        <div data-aos="fade-up">
         <p className='use'>
         Powering the leading <span>Web3 projects</span>
         </p>
+        </div>
 
-        <div className='web3'>
+        <div className='web3' data-aos="fade-up-right">
             {
                 data.map(({biography, Link}) => {
                     return(
-                        <div className='biography'>
+                        <div className='biography' data-aos="fade-down-right">
                             <NavLink to={Link} target='_blank'> <img src={biography} alt='biography' /></NavLink>
                         </div>
 

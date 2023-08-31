@@ -70,7 +70,7 @@
   align-items: center;
   gap: 2rem;
   border-bottom: 1px solid #ffbf00;
-  width: 105%;
+  width: 100%;
   
 }
 .myFooter .footerStart .socials a{
@@ -162,4 +162,72 @@
 .myFooter .footerStart .socials a .whatsapp:hover {
   background: #25D366;
   color: white;
+}
+
+@media (max-width: 320px){
+  .myFooter {
+    height: 60vh;
+    background: black;
+    
+  }
+  .myFooter .footerStart .shaftcoin {
+    color: whitesmoke;
+    padding-top: 8px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    
+  }
+  .myFooter .footerStart {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: transparent;
+    z-index: 999;
+   
+  }
+  .myFooter .footerStart .content {
+    margin-left: 5px;
+  }
+  .myFooter .footerStart .socials {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #ffbf00;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px){
+  .myFooter {
+    height: 60vh;
+    background: black;
+    
+  }
+  .myFooter .footerStart .shaftcoin {
+    color: whitesmoke;
+    padding-top: 8px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    
+  }
+  .myFooter .footerStart {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: transparent;
+    z-index: 999;
+   
+  }
+  .myFooter .footerStart .content {
+    margin-left: 5px;
+  }
+  .myFooter .footerStart .socials {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #ffbf00;
+    width: 100%;
+  }
 }

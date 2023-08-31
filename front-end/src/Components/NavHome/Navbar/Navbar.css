@@ -1,23 +1,23 @@
-.navbar .brandName a {
+#navbar .brandName a {
   display: flex;
   align-items: center;
 }
-.navbar .brandName {
+#navbar .brandName {
   display: flex;
   align-items: center;
 }
-.navbar .brandName p {
+#navbar .brandName p {
   color: white;
   margin-left: 4px;
   font-size: 1.2rem;
 }
-.navbar .brandName p span {
+#navbar .brandName p span {
   color: #ffbf00;
   margin-left: 3px;
   font-weight: 600;
 }
 
-.navbar {
+#navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,12 +25,11 @@
   background: transparent;
   padding: 1.5rem 1rem;
   top: 0;
-  margin-left: 2rem;
   /* background: #50C878; */
-  /* z-index: 999; */
+  z-index: 999;
 }
 /*   
-  .navbar.active {
+  #navbar.active {
     position: fixed;
     right: 0;
     left: 0;
@@ -39,63 +38,159 @@
   backdrop-filter: blur(5.6px);
   -webkit-backdrop-filter: blur(5.6px);
   } */
-.navbar a img {
+#navbar a img {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-.navbar .getStarted a {
-  padding: 0.8rem 1.3em;
-  border: 2px solid white;
+#navbar .getStarted a {
+  cursor: pointer;
   position: relative;
-  overflow: hidden;
-  text-align: center;
+  padding: 0.8rem 1.3em;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
-  transition: 0.3s;
-  cursor: pointer;
-  width: 3.3rem;
-  z-index: 1;
-  color: white;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s; 
+  width: 3.3rem;
+  z-index: 1;
+  color: white;
+  border: 2px solid white;
+  border-radius: 34px;
+  background-color: transparent;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-overflow: hidden;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  -o-transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
-.navbar .getStarted a::before {
+#navbar .getStarted a::before {
   content: '';
   position: absolute;
   inset: 0;
   margin: auto;
-  height: 1rem;
-  width: 3.3rem;
+  width: 52.5px;
+  height: 15px;
   border-radius: inherit;
   scale: 0;
   z-index: -1;
-  background-color: #FFBF00;
+  background-color: #ffbf00;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
-.navbar .getStarted a:hover::before {
+#navbar .getStarted a:hover::before {
   scale: 3;
 }
 
-.navbar .getStarted a:hover {
+#navbar .getStarted a:hover {
   color: black;
-  border: 2px solid #FFBF00;
+  border: 2px solid #ffbf00;
   scale: 1.1;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-.navbar .getStarted a:active{
+#navbar .getStarted a:active {
   scale: 1;
 }
 
+/* 
+media query */
+
+@media screen and (max-width: 320px) {
+  #navbar .brandName a {
+    display: flex;
+    align-items: center;
+  }
+  #navbar .brandName {
+    display: flex;
+    align-items: center;
+    margin-left: -0.5rem;
+  }
+  #navbar .brandName p {
+    color: white;
+    margin-left: 4px;
+    font-size: 1.2rem;
+  }
+  #navbar .brandName p span {
+    color: #ffbf00;
+    margin-left: 3px;
+    font-weight: 600;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  #navbar a img {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  #navbar .getStarted a {
+    padding: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  #navbar .getStarted a:active {
+    scale: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar .brandName a {
+    display: flex;
+    align-items: center;
+  }
+  #navbar .brandName {
+    display: flex;
+    align-items: center;
+    margin-left: -0.5rem;
+  }
+  #navbar .brandName p {
+    color: white;
+    margin-left: 4px;
+    font-size: 1.2rem;
+  }
+  #navbar .brandName p span {
+    color: #ffbf00;
+    margin-left: 3px;
+    font-weight: 600;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  #navbar a img {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  #navbar .getStarted a {
+    padding: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  #navbar .getStarted a:active {
+    scale: 1;
+  }
+}

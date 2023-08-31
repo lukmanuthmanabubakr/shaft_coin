@@ -35,16 +35,19 @@ const data = [
 const WhyUs = () => {
   return (
     <section className="whyUs">
+      <div data-aos="fade-right">
       <p className="why">
         Why{" "}
         <span className="shaft">
           shaft <span className="coin">Coin</span>
         </span>{" "}
       </p>
+      </div>
+
       <div className="ourContent">
         {data.map(({ id, media, content, text }) => {
           return (
-            <div key={id} className="main-content">
+            <div key={id} className="main-content" data-aos="fade-up">
               <div className="aspect">
                 <p className="media">{media}</p>
                 <p className="content">{content}</p>

@@ -19,7 +19,7 @@ const data = [
     id: 1,
     image: Director,
     title: "Director",
-    Name: "Aliu Musa",
+    Name: "Aliu",
     Carrier: "Blockchain Engineer",
     About:
       "Aliu Musa has wealth of experience in Software Engineering and Business Operations, having worked with top web3 companies.",
@@ -30,7 +30,7 @@ const data = [
     id: 2,
     image: Eazy,
     title: "Eazy",
-    Name: "Isiaq Tajudeen",
+    Name: "Isiaq",
     Carrier: "Software Developer",
     About:
       "Isiaq is a fullstack software developer who creates responsive websites and high-performing applications with mouthwatering.",
@@ -41,7 +41,7 @@ const data = [
     id: 3,
     image: Khady,
     title: "Khady",
-    Name: "Aliu Khadijah",
+    Name: "Khadijah",
     Carrier: "Blockchain Engineer",
     About:
       "Khadijah is a software developer who love beautiful designs and this is why she became passionate about Frontend software.",
@@ -52,9 +52,10 @@ const data = [
     id: 4,
     image: Naheem,
     title: "Naheem",
-    Name: "Naheem Oloyede",
+    Name: "Naheem",
     Carrier: "Software Developer",
-    About: "Naheem is a witty and result oriented full stack developer. Naheem's astuteness, resilience and zeal for getting excellent.",
+    About:
+      "Naheem is a witty and result oriented full stack developer. Naheem's astuteness, resilience and zeal for excellent.",
     Linledin: "https://www.linkedin.com/in/naheem-oloyede-593809251",
     Twitter: "https://twitter.com/oloyedeNaheem",
   },
@@ -62,10 +63,10 @@ const data = [
     id: 5,
     title: "Seyi",
     image: Seyi,
-    Name: "Oluwaseyi Abolaji",
+    Name: "Oluwaseyi",
     Carrier: "Product Designer",
     About:
-      "Oluwaseyi is a Product designer with a background in Computer Science",
+      "Oluwaseyi is a Product designer with a background in Computer Science, debitis at! Ad aliquam hic iusto",
     Linledin: "https://www.linkedin.com/in/oluwaseyi-abolaji-8b936a213",
     Twitter: "https://twitter.com/Oluwaseyi_7",
   },
@@ -73,21 +74,24 @@ const data = [
     id: 6,
     title: "Soliu",
     image: Soliu,
-    Name: "Soliu Ahmad",
+    Name: "Soliu",
     Carrier: "Software Developer",
-    About: "Soliu is a software developer, he is a very good team worker",
+    About: "Soliu is a software developer, he is a very good team worker incidunt quaerat maxime debitis at! Ad aliquam hic iusto",
     Linledin: "https://www.linkedin.com/in/soliu-ahmad-31b049240/",
     Twitter: "https://twitter.com/ahmadsoliu1",
   },
 ];
 
+
+const isMobileView = () => window.innerWidth <= (320, 480, 600);
+
 const Sponsors = () => {
   return (
-    <div className="mentors">
+    <div className="mentors" data-aos="fade-up">
       <Swiper
-        className={'navigation'}
-        spaceBetween={50}
-        slidesPerView={2}
+        className={"navigation"}
+        spaceBetween={40}
+        slidesPerView={isMobileView() ? 1 : 2}
         size={5}
         // centeredSlides={true}
         autoplay={{
@@ -97,13 +101,19 @@ const Sponsors = () => {
         pagination={{
           el: "",
         }}
-        navigation={true}
+        navigation
         modules={[Autoplay, Pagination, Navigation]}
+        
       >
+      
         {data.map(({ id, Name, Carrier, image, title, About }, index) => {
           return (
+            
             <SwiperSlide key={index}>
-              <div className="mentors-description">
+            {isMobileView() ? (
+                      <></>
+                    ) : (
+                      <div className="mentors-description">
                 <div className="mentors-description-content">
                   <div className="content">
                     <img src={image} alt={title} />
@@ -111,14 +121,31 @@ const Sponsors = () => {
                     <p className="carrier">{Carrier}</p>
                   </div>
                   <div className="star">
-                    <h1>
+                    {/* <h1>
                       <AiFillStar />
-                    </h1>
-                    <img src={celo} alt="celo" />
+                    </h1> */}
+
+                   
+
+                    {isMobileView() ? (
+                      <></>
+                    ) : (
+                      <h1>
+                      <AiFillStar />
+                    </h1> 
+                    )}
+                    {/* <img src={celo} alt="celo" /> */}
+                    {isMobileView() ? (
+                      <></>
+                    ) : (
+                      <img src={celo} alt="celo" />
+                    )}
                   </div>
                 </div>
                 <p className="title">{About}</p>
               </div>
+                    )}
+              
             </SwiperSlide>
           );
         })}

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from 'react'
 import { BsUnity } from "react-icons/bs";
 import { IoFlashSharp } from "react-icons/io5";
 import { MdPayment } from "react-icons/md";
 import { TbSend } from "react-icons/tb";
 import "./Aspect2.css";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import { NavLink } from "react-router-dom";
 const data = [
@@ -37,9 +39,14 @@ const data = [
   },
 ];
 const Aspect2 = () => {
+  const isMobileView = () => window.innerWidth <= 320;
+  useEffect(() => {
+    AOS.init({duration: 2000})
+},[])
+
   return (
     <section className="Aspect2">
-      <div className="Aspect2-send">
+      <div className="Aspect2-send" data-aos="fade-up">
         <h1>
           Send, spend and earn with <span>crypto</span> and <span>cash</span>
         </h1>
@@ -48,7 +55,9 @@ const Aspect2 = () => {
           any time you need it
         </p>
       </div>
-      <div className="contents">
+
+      <div className="contents" data-aos="fade-right">
+        {/* {isMobileView() ? (<div></div>) : ()} */}
         {data.map(({ id, logo, content, innerContent }) => {
           return (
             <div key={id} className="split">
@@ -60,7 +69,7 @@ const Aspect2 = () => {
             </div>
           );
         })}
-        <NavLink to='/get-start/home' className='get-start'>Get Started</NavLink>
+        {/* <NavLink to='/get-start/home' className='get-start'>Get Started</NavLink> */}
       </div>
     </section>
   );

@@ -277,7 +277,7 @@ export const deleteUser = createAsyncThunk(
 );
 
 
-//delete Users
+//UpgradeUsers
 export const upgradeUser = createAsyncThunk(
   "auth/upgradeUser",
   async (userData, thunkAPI) => {
@@ -295,6 +295,11 @@ export const upgradeUser = createAsyncThunk(
     }
   }
 );
+
+
+
+
+
 
 
 

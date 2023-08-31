@@ -18,7 +18,7 @@ const DropDownMenu = () => {
     <div className='drop_down'>
         <ul className='drop_down_list'>
             <li> <NavLink to="/get-start/profile">Profile</NavLink></li>
-            <li onClick={logoutUser}> <NavLink to="/get-start/logout">Logout</NavLink></li>
+            <li onClick={logoutUser}> <NavLink>Logout</NavLink></li>
         </ul>
     </div>
   )

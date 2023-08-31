@@ -26,7 +26,7 @@ const userSchema = mongoose.Schema(
         photo: {
             type: String,
             required:[ true, "Please Input A Photo"],
-            default: "https://tinyurl.com/y83z2aba"
+            default: "https://is.gd/asKBnv"
         },
         phoneNumber: {
             type: String,

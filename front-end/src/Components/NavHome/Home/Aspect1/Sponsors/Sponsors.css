@@ -1,4 +1,125 @@
 .mentors .mentors-description .mentors-description-content .content img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border: 3px solid #ffbf00;
+  opacity: -2rem;
+  background: white;
+  margin-left: 2rem;
+  margin-top: -1rem;
+}
+.mentors {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.mentors .mentors-description {
+background: black;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(13.8px);
+-webkit-backdrop-filter: blur(13.8px);
+border: 1px solid #ffbf00;
+  margin-top: 3.5rem;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
+
+}
+.mentors .mentors-description .mentors-description-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14rem;
+  margin-top: -2rem;
+
+}
+
+.mentors .mentors-description .mentors-description-content .content .carrier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+}
+
+.mentors .mentors-description .mentors-description-content .content h1 {
+  margin-left: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-top: 8px;
+}
+
+.mentors .mentors-description .mentors-description-content .star {
+}
+
+.mentors .mentors-description .mentors-description-content .star h1 {
+  color: #ffbf00;
+  font-size: 4rem;
+  margin-left: 6rem;
+}
+
+.mentors .mentors-description {
+  display: inline-block;
+}
+.mentors .mentors-description .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.7rem;
+  font-size: .9rem;
+  font-weight: 300;
+  margin-bottom: .5rem;
+  margin-top: -1rem;
+  color: whitesmoke;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.navigation {
+  --swiper-navigation-color: #ffbf00;
+  --swiper-navigation-size: "30px";
+  --swiper-navigation-background: #ffbf00;
+}
+
+
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 320px) {
+  .mentors {
+    margin-top: 7rem;
+  }
+  .mentors .mentors-description {
+    background: black;
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-border-radius: 1.3rem;
+    -moz-border-radius: 1.3rem;
+    -ms-border-radius: 1.3rem;
+    -o-border-radius: 1.3rem;
+    /* margin-left: -1rem;
+    margin-right: 1rem;
+    margin-top: 5rem; */
+    margin: 0 auto;
+    width: 80%;
+   
+  }
+  .mentors .mentors-description .mentors-description-content .content img {
     height: 6rem;
     width: 6rem;
     border-radius: 100%;
@@ -6,19 +127,46 @@
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
-    border: 3px solid #FFBF00;
+    border: 3px solid #ffbf00;
     opacity: -2rem;
-   background: white;
-   margin-left: 2rem;
-   margin-top: -1rem;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  .mentors .mentors-description .mentors-description-content .content h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    margin-top: 8px;
 }
-.mentors{
-  margin-top: -8.5rem;
- 
+  .mentors .mentors-description .mentors-description-content .content .carrier{
+    color: #ffbf00;
+    margin-top: 8px;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+}
+  .mentors .mentors-description .title{
+    color: white;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 300;
 
 }
-.mentors .mentors-description {
-    background: hsla(0, 0%, 100%, 0.35);
+}
+@media (max-width: 480px) {
+  .mentors {
+    margin-top: 14rem;
+  }
+  .mentors .mentors-description {
+    background: black;
     border-radius: 1.3rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.3px);
@@ -31,101 +179,53 @@
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 5rem;
+    width: 85%;
    
-    
-}
-.mentors .mentors-description .mentors-description-content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15rem;
-    margin-top: -2rem;
-}
-.mentors .mentors-description .mentors-description-content .content .carrier {
+  }
+  .mentors .mentors-description .mentors-description-content .content img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border: 3px solid #ffbf00;
+    opacity: -2rem;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1.7rem;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #343434;
-    margin-bottom: 1rem;
-    margin-top: 5px;
+    margin-left: 9rem;
+    margin-top: -1rem;
+  }
 
-}
-
-
-.mentors .mentors-description .mentors-description-content .content h1{
-    /* display: flex;
+  .mentors .mentors-description .mentors-description-content .content h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 8rem;
     font-size: 1.5rem;
-    margin-left: 1.7rem;
-    margin-top: 1rem;
     font-weight: 500;
     color: white;
-    justify-content: center; */
+    margin-top: 9px;
+}
+  .mentors .mentors-description .mentors-description-content .content .carrier{
+    color: #ffbf00;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1.7rem;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 100%;
+    margin-left: 3.4rem;
+    
+}
+  .mentors .mentors-description .title{
     color: white;
     margin-top: 8px;
-}
-
-.mentors .mentors-description .mentors-description-content .star{
-
-}
-
-.mentors .mentors-description .mentors-description-content .star h1{
-    /* color: white; */
-    color: #FFBF00;
-    font-size: 4rem;
-    margin-left: 6rem;
-   
-}
-.mentors .mentors-description .mentors-description-content .star img{
-    
-}
-.mentors .mentors-description{
-    display: inline-block;
-
-}
-.mentors .mentors-description .title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1.7rem;
     font-size: 1.2rem;
-    font-weight: 300;
-    color: #343434;
-    margin-bottom: 1rem;
+    font-weight: 400;
+}
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-  .navigation{
-    --swiper-navigation-color: "#000";
-    --swiper-navigation-size: "25px";
-    
-  }
-  
-  /* .swiper-slide {
-    /* text-align: center;
-    font-size: 1px; */
-    /* background: #fff; */
-  
-    /* Center slide text vertically */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-  
-
-  .swiper-slide img {
-    display: block;
-    /* width: 100%;
-    height: 100%; */
-    object-fit: cover;
-  }
-  

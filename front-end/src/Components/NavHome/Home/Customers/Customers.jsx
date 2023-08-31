@@ -1,10 +1,10 @@
-import React from "react";
 import "./Customers.css";
 import { NavLink } from "react-router-dom";
 import donation from "../../../../Asset/donation.jpg";
 import invoice from "../../../../Asset/invoice.jpg";
 import online from "../../../../Asset/online.jpg";
 import store from "../../../../Asset/store.avif";
+import React from "react";
 
 const data = [
   {
@@ -48,10 +48,10 @@ const Customers = () => {
         {data.map(({id, servises, header, secondHeader, content}) => {
           return (
             <div key={id} className="split">
-              <div className="services">
+              <div className="services" data-aos="fade-up">
                 <img src={servises} alt="store" />
               </div>
-              <div className='content'>
+              <div className='content' data-aos="fade-down">
               <p className="header">{header}</p>
               <p className="secondHeader">{secondHeader}</p>
               <p className='text'>{content}</p>
@@ -60,20 +60,9 @@ const Customers = () => {
           );
         })}
       </div>
-      <NavLink to='/about'>About</NavLink>
+      <div data-aos="flip-up"><NavLink to='/about' className="abt">About</NavLink></div>
     </section>
   );
 };
 
 export default Customers;
-
-{
-  /* <div className='services'>
-              <img src={store} alt='store'/>
-            </div>
-            <div className='content'>
-              <p>IN-STORE / ONLINE</p>
-              <p>Point of Sale / E-Commerce</p>
-              <p className='text'>We offer plug and play payment widget, API and plugins that fit into modern websites and frameworks</p>
-            </div> */
-}

@@ -82,3 +82,113 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   }
+  @media (max-width: 320px) {
+    .smartMe {
+        height: 30vh;
+    }
+    .smartMe .information{
+        color: black;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+.smartMe .information .same {
+    color: #FFBF00;
+    font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 1.2rem;
+}
+
+.smartMe .information-today{
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+   text-align: center;   
+}
+.smartMe .information-today  .same {
+    color: #FFBF00;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+
+.smartMe .ContactMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+    color: #FFBF00;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 8px;
+    border: 2px solid #FFBF00;
+    font-size: 1rem;
+    z-index: 1;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+  }
+  @media (max-width: 480px) {
+    .smartMe {
+        height: 30vh;
+    }
+    .smartMe .information{
+        color: black;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+.smartMe .information .same {
+    color: #FFBF00;
+    font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 1rem;
+}
+
+.smartMe .information-today{
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+   text-align: center;   
+}
+.smartMe .information-today  .same {
+    color: #FFBF00;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+
+.smartMe .ContactMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+    color: #FFBF00;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 8px;
+    border: 2px solid #FFBF00;
+    font-size: 1rem;
+    z-index: 1;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+  }
