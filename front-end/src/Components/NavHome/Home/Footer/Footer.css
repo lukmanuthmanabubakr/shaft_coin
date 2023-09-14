@@ -164,7 +164,7 @@
   color: white;
 }
 
-@media (max-width: 320px){
+@media (min-width: 100px) and (max-width: 320px){
   .myFooter {
     height: 60vh;
     background: black;
@@ -198,7 +198,7 @@
   }
 }
 
-@media (max-width: 480px){
+@media screen and (min-width: 320px) and (max-width: 480px){
   .myFooter {
     height: 60vh;
     background: black;

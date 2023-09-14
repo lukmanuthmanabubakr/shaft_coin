@@ -82,7 +82,7 @@
   -o-transform: scale(1.1, 1.1);
 }
 
-@media (max-width: 320px) {
+@media (min-width: 100px) and (max-width: 320px) {
     .whyUs {
     height: 270vh;
     background: black;
@@ -114,11 +114,13 @@
     gap: 1rem;
     padding-left: .5rem;
     padding-right: .4rem;
+    margin-left: -.3rem;
   }
   .whyUs .ourContent .main-content {
     height: 60vh;
     background: white;
     border-radius: 1rem;
+    width: 100%;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
@@ -141,13 +143,19 @@
   }
   .whyUs .ourContent .main-content .media {
     color: white;
-    padding-top: 2.5rem;
-    padding-left: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.3rem;
+    margin-left: -8rem;
   }
   .whyUs .ourContent .main-content .content {
     color: white;
-    padding-left: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: -6rem;
     font-size: 1.6rem;
   }
   .whyUs .ourContent .text {
@@ -161,13 +169,12 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-    .whyUs {
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .whyUs {
     height: 270vh;
     background: black;
     margin-bottom: 1.5rem;
     padding: 8px;
-    margin-top: 5rem;
   }
   .whyUs .why{
     display: flex;
@@ -175,8 +182,8 @@
     align-items: center;
     margin-top: -2.5rem;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
   .whyUs .why .shaft {
     margin-left: .5rem;
@@ -192,13 +199,15 @@
     grid-template-columns: auto;
     margin-top: 1.5rem;
     gap: 1rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: .5rem;
+    padding-right: .4rem;
+    margin-left: -.3rem;
   }
   .whyUs .ourContent .main-content {
     height: 60vh;
     background: white;
     border-radius: 1rem;
+    width: 100%;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
@@ -221,13 +230,19 @@
   }
   .whyUs .ourContent .main-content .media {
     color: white;
-    padding-top: 1.8rem;
-    padding-left: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.3rem;
+    margin-left: -8rem;
   }
   .whyUs .ourContent .main-content .content {
     color: white;
-    padding-left: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: -6rem;
     font-size: 1.6rem;
   }
   .whyUs .ourContent .text {

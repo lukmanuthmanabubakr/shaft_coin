@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const ContactMe = () => {
   return (
     <section className="smartMe">
-    <div data-aos="fade-up-right">
+    <div data-aos="fade-up">
     <p className="information">
         Contact us for more <span className="same">information</span> and the option that is
       </p>

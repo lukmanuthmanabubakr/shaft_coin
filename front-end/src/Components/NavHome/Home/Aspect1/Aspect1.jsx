@@ -4,15 +4,17 @@ import "./Aspect1.css";
 import { Typewriter } from 'react-simple-typewriter'
 
 const Aspect1 = () => {
+  const isMobileView = () => window.innerWidth <= 320;
   return (
     <>
       <section className="Aspect-1-section">
+      
         <div className="Aspect-1-section-intro">
+        {isMobileView() ? (
           <h1 className="intese_content">
-            Bridging the <span>fiat</span> and <span>crypto</span> global the
+            Bridging <span>fiat</span> and <span>crypto</span> global the
             {""}
             <span className="typewriter" style={{ color: "#ffbf00", fontWeight: "bold" }}>
-              {/* Style will be inherited from the parent element */}
               <Typewriter
                 words={["Economies", "World", "Universe"]}
                 loop={true}
@@ -24,6 +26,12 @@ const Aspect1 = () => {
               />
             </span>
           </h1>
+          ) : (
+          <h1 className="intese_content">
+            Bridging <span>fiat</span> and <span>crypto</span> global the World
+          </h1>
+          )}
+          
           <NavLink to="/get-start/home" className="get-start">
             <span>Get Started</span>
           </NavLink>

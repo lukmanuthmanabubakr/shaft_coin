@@ -1,11 +1,7 @@
 .theNav{
-    display: grid;
-    background: black;
-    gap: 3rem;
-    border: none;
-    outline: none;
-    height: 80vh;
-    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .theNav  a{
     color: white;
@@ -21,6 +17,48 @@
 .theNav a:hover{
     color: #ffbf00;
 }
-.theNav a span{
+.theNav a .icon{
     padding-right: 6px;
+    color: #ffbf00;
+}
+
+@media screen and (max-width: 768px) {
+    .theNav {
+        display: none;
+    }
+    .theNavMobile{
+        display: grid;
+        gap: 1rem;
+        position: absolute;
+        background: rgb(25, 24, 24);
+        width: 20%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        /* height: 100vh; */
+        transition: all 400ms ease;
+        animation: myright 2s 1;
+        animation-timing-function: linear;
+        -webkit-animation: myright 2s 1;
+        -moz-transition: all 400ms ease;
+        -ms-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        -webkit-transition: all 400ms ease;
+        padding-top: 3rem;
+    }
+    .theNavMobile  a .icon{
+        color: #ffbf00;
+        font-size: 1.8rem;
+        font-weight: 600;
+        transition: all 400ms ease;
+      -webkit-transition: all 400ms ease;
+      -moz-transition: all 400ms ease;
+      -ms-transition: all 400ms ease;
+      -o-transition: all 400ms ease;
+      padding-left: 1.5rem;
+    }
+
+    .theNavMobile a .pro{
+        display: none;
+    }
 }

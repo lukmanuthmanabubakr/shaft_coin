@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 import { v4 as uuidv4 } from "uuid";
 import "./ContactUs.css";
 import Footer from "../NavHome/Home/Footer/Footer";
+import Navbar from "../NavHome/Navbar/Navbar";
 
 const initialState = {
   fname: "",
@@ -85,18 +86,9 @@ const ContactUs = () => {
   return (
     <>
       <section className="contactMe">
-        <nav className="contact_us">
-          <div className="brandName" onClick={goHome}>
-            <NavLink to="/">
-              {" "}
-              <img src={Logo} alt="bird" />
-              <p className="shaft_coin">
-                Shaft<span>Coin</span>
-              </p>
-            </NavLink>
-          </div>
-        </nav>
-
+        <div>
+          <Navbar />
+        </div>
         <h1 className="tense">Contact Us</h1>
 
         <div className="mainInbox">

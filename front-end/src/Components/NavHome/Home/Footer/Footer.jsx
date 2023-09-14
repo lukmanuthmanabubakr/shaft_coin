@@ -17,7 +17,7 @@ const Footer = () => {
               Shaft<span>Coin</span>
             </p>
           </article>
-        <div data-aos="zoom-in">
+        <div data-aos="fade-up">
         <p className="shaftcoin">
             Shaft Coin is a payment solutions provider that seamlessly connects
             fiat and crypto economies for global consumers, merchants,
@@ -25,7 +25,7 @@ const Footer = () => {
           </p>
         </div>
 
-          <div className="socials" data-aos="zoom-in-down">
+          <div className="socials" data-aos="fade-up">
             <NavLink
               className="github"
               to="https://github.com/lukmanuthmanabubakr/shaft-soin"

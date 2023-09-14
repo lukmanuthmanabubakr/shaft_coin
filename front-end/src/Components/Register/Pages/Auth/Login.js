@@ -5,11 +5,16 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { validateEmail } from "../../Redux/Features/Auth/AuthService";
-import { RESET, login } from "../../Redux/Features/Auth/authSlice";
+import {
+  RESET,
+  login,
+  loginWithGoogle,
+  sendLoginCode,
+} from "../../Redux/Features/Auth/authSlice";
 import Logo from "../../../../Asset/logo.png";
 import "./Login.css";
 import Mode from "../../../Mode/Mode";
-import google_btn from "../../../../Asset/gog.png";
+import { GoogleLogin } from "@react-oauth/google";
 
 const initialState = {
   email: "",
@@ -25,12 +30,10 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
- 
-  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isLoggedIn, isSuccess, } = useSelector(
+  const { isLoggedIn, isSuccess, isError, twoFactor } = useSelector(
     (state) => state.auth
   );
 
@@ -53,19 +56,32 @@ const Login = () => {
     await dispatch(login(userData));
   };
 
- 
-  
   useEffect(() => {
     if (isSuccess && isLoggedIn) {
       navigate("/get-start/home");
     }
 
+    if (isError && twoFactor) {
+      dispatch(sendLoginCode(email));
+      navigate(`/loginWithCode/${email}`);
+    }
+
     dispatch(RESET());
-  }, [isLoggedIn, isSuccess, dispatch, navigate]);
+  }, [isLoggedIn, isSuccess, dispatch, navigate, isError, email, twoFactor]);
 
   const goHome = () => {
     navigate("/");
   };
+
+
+  const googleLogin = async (credentialResponse ) => {
+    console.log(credentialResponse)
+
+    await dispatch(
+      loginWithGoogle({userToken: credentialResponse.credential})
+    )
+  }
+
 
 
   return (
@@ -85,12 +101,18 @@ const Login = () => {
         </div>
       </div>
       <div className="loginContainer">
-        <button className="google_btn">
+        {/* <button className="google_btn">
           {" "}
           <img src={google_btn} alt="google" /> Login with Google
-        </button>
+        </button> */}
+        <GoogleLogin
+        className="google"
+          onSuccess={googleLogin}
+          onError={() => {
+            toast.error("Login Failed")
+          }}
+        />
         <h1>OR</h1>
-
         <form onSubmit={loginUser}>
           <div className="inputName">
             <label>Email</label>
@@ -124,7 +146,7 @@ const Login = () => {
             <NavLink to="/">Home</NavLink>
           </span>
           <span className="reg">
-            Don't have an account
+            <span className="acct">Don't have an account</span>
             <NavLink to="/register">Register?</NavLink>
           </span>
         </p>

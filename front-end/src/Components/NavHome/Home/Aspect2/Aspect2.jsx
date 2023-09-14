@@ -56,7 +56,7 @@ const Aspect2 = () => {
         </p>
       </div>
 
-      <div className="contents" data-aos="fade-right">
+      <div className="contents" data-aos="fade-up">
         {/* {isMobileView() ? (<div></div>) : ()} */}
         {data.map(({ id, logo, content, innerContent }) => {
           return (

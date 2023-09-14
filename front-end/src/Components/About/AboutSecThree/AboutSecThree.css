@@ -1,4 +1,126 @@
 .AboutSecThree{
     background: black;
     margin-bottom: 2rem;
+    height: 130vh;
+}
+.AboutSecThree .image img {
+    height: 100%;
+    width: 100%;
+}
+.AboutSecThree .sectioOne{
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.AboutSecThree .sectioOne .working{
+    width: 100%;
+    padding-top: 10rem;
+}
+.AboutSecThree .sectioOne .working .with{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem; 
+}
+.AboutSecThree .sectioOne .working .commit{
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+/* two */
+
+.AboutSecThree .sectioTwo{
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.AboutSecThree .sectioTwo .working{
+    width: 90%;
+    padding-top: 8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+.AboutSecThree .sectioTwo .working .with{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem; 
+}
+.AboutSecThree .sectioTwo .working .commit{
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .AboutSecThree{
+        background: black;
+        margin-bottom: 2rem;
+        height: 220vh;
+        margin-right: 0;
+    }
+    .AboutSecThree .image img {
+        height: 70%;
+        width: 220%;
+        margin-left: -13rem;
+        margin-bottom: 10rem;
+    }
+    .AboutSecThree .sectioOne{
+
+        display: grid;
+    }
+    .AboutSecThree .sectioOne .working{
+        width: 200%;
+        margin-top: 20rem;
+    }
+    .AboutSecThree .sectioOne .working .with{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: white;
+        margin-bottom: 1rem; 
+    }
+    .AboutSecThree .sectioOne .working .commit{
+        font-size: 1rem;
+        color: whitesmoke;
+    }
+    
+    /* two */
+    
+    .AboutSecThree .sectioTwo{
+        display: grid;
+        
+    }
+    .AboutSecThree .sectioTwo .myImg{
+        height: 70%;
+        width: 220%;
+        margin-left: -2rem;
+        margin-bottom: 10rem;
+    }
+
+    .AboutSecThree .sectioTwo .working{
+        width: 200%;
+        margin-top: 20rem;
+        margin-left: -12rem;
+        
+    }
+    .AboutSecThree .sectioTwo .working .with{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: white;
+        margin-top: 1rem;
+       
+    }
+    .AboutSecThree .sectioTwo .working .commit{
+        font-size: 1rem;
+        color: whitesmoke;
+    }
+    
 }

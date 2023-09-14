@@ -76,12 +76,12 @@ const data = [
     image: Soliu,
     Name: "Soliu",
     Carrier: "Software Developer",
-    About: "Soliu is a software developer, he is a very good team worker incidunt quaerat maxime debitis at! Ad aliquam hic iusto",
+    About:
+      "Soliu is a software developer, he is a very good team worker incidunt quaerat maxime debitis at! Ad aliquam hic iusto",
     Linledin: "https://www.linkedin.com/in/soliu-ahmad-31b049240/",
     Twitter: "https://twitter.com/ahmadsoliu1",
   },
 ];
-
 
 const isMobileView = () => window.innerWidth <= (320, 480, 600);
 
@@ -103,17 +103,11 @@ const Sponsors = () => {
         }}
         navigation
         modules={[Autoplay, Pagination, Navigation]}
-        
       >
-      
         {data.map(({ id, Name, Carrier, image, title, About }, index) => {
           return (
-            
             <SwiperSlide key={index}>
-            {isMobileView() ? (
-                      <></>
-                    ) : (
-                      <div className="mentors-description">
+              <div className="mentors-description">
                 <div className="mentors-description-content">
                   <div className="content">
                     <img src={image} alt={title} />
@@ -125,27 +119,15 @@ const Sponsors = () => {
                       <AiFillStar />
                     </h1> */}
 
-                   
-
-                    {isMobileView() ? (
-                      <></>
-                    ) : (
-                      <h1>
+                    <h1>
                       <AiFillStar />
-                    </h1> 
-                    )}
-                    {/* <img src={celo} alt="celo" /> */}
-                    {isMobileView() ? (
-                      <></>
-                    ) : (
-                      <img src={celo} alt="celo" />
-                    )}
+                    </h1>
+
+                    <img src={celo} alt="celo" className="celo" />
                   </div>
                 </div>
                 <p className="title">{About}</p>
               </div>
-                    )}
-              
             </SwiperSlide>
           );
         })}

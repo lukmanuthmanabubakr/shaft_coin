@@ -327,3 +327,244 @@
     padding-right: 3rem;
     font-size: 1.2rem;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .AboutSecOne .family{
+        display: grid;
+        margin-right: 0;
+        margin-left: -1rem;
+        overflow: hidden;
+    }
+    .AboutSecOne{
+        height: 400vh;
+    }
+    .AboutSecOne .family .family-bg{
+        height: 20rem;
+        width: 20rem;
+        margin-left: -1rem;
+    }
+    .AboutSecOne .family .family-image .arrow{
+        display: none;
+    }
+    .AboutSecOne .family .family-Text{
+        margin-top: 1rem;
+        margin-left: .5rem;
+    }
+    .AboutSecOne .family .family-Text .crypto{
+        color: white;
+        margin-right: 9rem;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    .AboutSecOne .family .family-Text .one{
+        color: #FFBF00;
+        margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    .AboutSecOne .family .family-Text  .all{
+        color: #FFBF00;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
+    .AboutSecOne .family .family-Text .establish{
+        color: whitesmoke;
+        font-size: 1.2rem;
+        width: 18rem;
+        margin-top: 2rem;
+    }
+    .AboutSecOne .family-images{
+        margin-left: -1rem;
+    }
+
+    
+.AboutSecOne .container{
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .2rem;
+    display: grid;
+    overflow: hidden;
+}
+
+.AboutSecOne .container .shaft img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 2rem;
+}
+.AboutSecOne .container .shaft .coin .shaft-coin{
+    color: white;
+  margin-left: -1.5rem;
+  font-size: 1.2rem;
+  width: 14%;
+}
+
+.AboutSecOne .container .shaft .coin .shaft-coin span{
+    color: #FFBF00;
+    margin-left: 3px;
+    font-weight: 600;
+}
+.AboutSecOne .container .shaft .coin{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #FFBF00;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 80%;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 80%;
+    -ms-border-radius: 80%;
+    -o-border-radius: 80%;
+}
+.AboutSecOne .container-images .arrow{
+    display: none;
+}
+
+
+.AboutSecOne .container .container-Text{
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+}
+.AboutSecOne .container .container-Text .crypto{
+    color: white;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-left: -2rem;
+}
+.AboutSecOne .container .container-Text .one{
+    color: #FFBF00;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    margin-left: -2rem;
+}
+.AboutSecOne .container .container-Text  .all{
+    color: #FFBF00;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-left: -2rem;
+}
+.AboutSecOne .container .container-Text .establish{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-top: 8px;
+    margin-left: -2rem;
+}
+
+.AboutSecOne .inbox .inbox-bg {
+   display: none;
+}
+.AboutSecOne .inbox .inbox-image .arrow{
+    color: #FFBF00;
+    font-size: 5rem;
+    margin-left: 23.5rem;
+    margin-top: -5rem;
+}
+.AboutSecOne .inbox {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.AboutSecOne .inbox .inbox-Text{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+.AboutSecOne .inbox .inbox-Text .crypto{
+    color: white;
+    margin-right: 10rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.AboutSecOne .inbox .inbox-Text .one{
+    color: #FFBF00;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.AboutSecOne .inbox .inbox-Text  .all{
+    color: #FFBF00;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+.AboutSecOne .inbox .inbox-Text .establish{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    width: 18rem;
+    margin-top: 2rem;
+}
+.AboutSecOne .inbox-image{
+    /* margin-top: -3rem; */
+}
+
+.AboutSecOne .inbox-images .shaft .coin{
+    margin-top: 3rem;
+    margin-right: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #FFBF00;
+    height: 25rem;
+    width: 30rem;
+    border-radius: 80%;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 80%;
+    -ms-border-radius: 80%;
+    -o-border-radius: 80%;
+}
+.AboutSecOne .inbox-images .arrow{
+   display: none;
+}
+
+.AboutSecOne .inbox .inbox-Text-1{
+    margin-top: -2rem;
+}
+
+.AboutSecOne .inbox .inbox-Text-1 .mission{
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;  
+    margin-bottom: -2px; 
+}
+.AboutSecOne .inbox .inbox-Text-1 .mission .ourMission{
+    margin-left: 6px;
+    color: #FFBF00;
+}
+.AboutSecOne .inbox .inbox-Text-1 .establish{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    width: 23rem;
+    margin-top: 2rem;
+}
+.AboutSecOne .provide{
+    color: #FFBF00;
+    display: flex;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+}
+
+.AboutSecOne .provide .glance {
+    margin-left: 10px;
+    color: #FFBF00;
+    display: none;
+   
+}
+.AboutSecOne .myCoin{
+    margin-left: -2rem;
+}
+}

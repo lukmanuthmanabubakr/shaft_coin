@@ -100,10 +100,9 @@
     user-select: none;
 }
 
-@media (max-width: 320px){
+@media (min-width: 100px) and (max-width: 320px){
   .customers{
-    height: 180vh;
-    background: white;
+    height: 220vh;
     margin-bottom: 1.5rem;
 }
 .customers h1 {
@@ -120,15 +119,15 @@
   gap: 1rem;
 }
 .customers .customer-split img {
-  height: 6.5rem;
-  width: 13rem;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  user-select: none;
-  margin-left: 3rem;
+ height: 6.5rem;
+ width: 13rem;
+ border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
+ user-select: none;
+ margin-left: 2rem;
 }
 .customers .customer-split .split{
   display: grid;
@@ -154,6 +153,7 @@
 .customers .customer-split .text{
   display: block;
   flex-wrap: wrap;
+  padding-left: 1.2rem;
 }
 .customers .abt{
   margin-bottom: 3rem;
@@ -173,17 +173,16 @@
 }
 }
 
-@media screen and (max-width: 480px){
+
+@media screen and (min-width: 320px) and (max-width: 480px){
   .customers{
-    height: 230vh;
-    background: white;
+    height: 220vh;
     margin-bottom: 1.5rem;
 }
 .customers h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
@@ -194,15 +193,15 @@
   gap: 1rem;
 }
 .customers .customer-split img {
-  height: 9rem;
-  width: 18rem;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  user-select: none;
-  margin-left: 5rem;
+ height: 6.5rem;
+ width: 13rem;
+ border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
+ user-select: none;
+ margin-left: 2rem;
 }
 .customers .customer-split .split{
   display: grid;
@@ -228,13 +227,11 @@
 .customers .customer-split .text{
   display: block;
   flex-wrap: wrap;
-  font-size: 1.2rem;
-  padding: 8px;
+  padding-left: 1.2rem;
 }
 .customers .abt{
   margin-bottom: 3rem;
   padding: 8px;
-  width: 50%;
   border: 2px solid #ffbf00;
   font-size: 13px;
   z-index: 1;
@@ -245,9 +242,7 @@
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
   position: absolute;
-  left: 20%;
-  top: 680%;
-  font-size: 1.3rem;
-  font-weight: 500;
+  left: 30%;
+  top: 705%;
 }
 }

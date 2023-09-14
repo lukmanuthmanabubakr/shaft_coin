@@ -1,0 +1,140 @@
+.amountSec{
+  margin: 0;
+  outline: 0;
+}
+.amountWallet .wallet{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.amountWallet .wallet a img{
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.amountWallet .wallet a {
+  display: flex;
+  align-items: center;
+}
+.amountWallet .wallet {
+  display: flex;
+  align-items: center;
+}
+.amountWallet .wallet p {
+  color: white;
+  margin-left: 4px;
+  font-size: 1.2rem;
+}
+.amountWallet .wallet p span {
+  color: #ffbf00;
+  margin-left: 3px;
+  font-weight: 600;
+}
+.amountWallet .dash-board{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  background: #ffbf00;
+  padding-top: 8px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 8px;
+  transition: all 400ms ease;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.amountWallet .dash-board:hover{
+  background: white;
+  color: orange;
+}
+.amountSec .main {
+  margin-top: 2rem;
+}
+.amountSec .main .sending{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.amountSec .main .paymentMethod{
+  padding-left: 35%;
+  padding-right: 35%;
+}
+.amountSec .main .paymentMethod .walllet{
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffbf00;
+}
+.amountSec .main .paymentMethod .paymentMethodType:hover{
+  transform: scale(1, 1.1);
+  -webkit-transform: scale(1, 1.1);
+  -moz-transform: scale(1, 1.1);
+  -ms-transform: scale(1, 1.1);
+  -o-transform: scale(1, 1.1);
+}
+.amountSec .main .paymentMethod .paymentMethodType{
+  background: white;
+  margin-bottom: 2rem;
+  margin-top: 10px;
+  padding: 1.3rem;
+  border: 2px solid #ffbf00;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  cursor: pointer;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.amountSec .main .paymentMethod .send{
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.amountSec .main .paymentMethod .paymentMethodType .fees{
+  margin-top: .3rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.amountSec .main .paymentMethod .paymentMethodType .fees .five{
+  font-size: 1.1rem;
+  font-weight:500;
+  background: #FAA0A0;
+  color: #880808;
+  padding: 8px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.amountSec .main .paymentMethod .paymentMethodType .fees .ins {
+  font-size: 1.1rem;
+  font-weight:500;
+  background: #98FB98;
+  color: green;
+  padding: 8px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}

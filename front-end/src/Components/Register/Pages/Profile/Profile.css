@@ -1,187 +1,730 @@
 .container {
-  height: 140vh;
+  height: 100vh;
   background: black;
   margin: 0;
-}
-
-.container .main {
-  position: absolute;
-  top: 20%;
-  left: 17%;
-  display: grid;
-  grid-template-columns: 30% 60%;
-  background: #ffbf00;
-  width: 75vw;
-  border: 2px solid #ffbf00;
-}
-.container .main .pageMenu {
+  padding: 1.2rem;
 }
 .container .main .profile {
-  padding-top: 2rem;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: 1.5rem;
-  margin-left: 4.5rem;
-
+  border: 2px solid #ffbf00;
+  display: grid;
+  height: 80vh;
+  background: black;
+  grid-template-columns: 30% 60%;
 }
-
-.container .main .profile .myAcct{
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-.container .main .profile img{
-    height: 7rem;
-    width: 7rem;
-    border: 2px solid white;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-.container .main .profile .role{
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-.container .main .profile .role span{
-    color: white;
-    text-transform: uppercase;
-}
-.container .main .profile form .changePhoto{
+.container .main  .myAcct {
   display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.container .main .profile form .changePhoto label {
-  font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-.container .main .profile form .name label {
-  font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-.container .main .profile form .email label {
-  font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-.container .main .profile form .num label {
-  font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-.container .main .profile form .changePhoto input{
-  margin-left: 1.2rem;
-  border: none;
-}
-.container .main .profile form .name input{
-  margin-left: 1.2rem;
-  background: whitesmoke;
-  padding: 5px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-.container .main .profile form .email input{
-  margin-left: 1.2rem;
-  background: whitesmoke;
-  padding: 5px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  margin-top: 5px;
-  width: 20rem;
-}
-.container .main .profile form .num input{
-  margin-left: 1.2rem;
-  background: whitesmoke;
-  padding: 5px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  margin-top: 5px;
-}
-
-.container .main .profile form .bio {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-}
-.container .main .profile form .bio label{
-  padding-bottom: 8rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.container .main .profile form .bio textarea{
- padding: 6px;
- color: black;
- margin-left: 1rem;
- resize: none;
-}
-
-.container .main .profile form button{
-  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
   margin-top: 1rem;
-  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.container .main .profile .myImg {
+  background: white;
+  margin-right: 1.5rem;
+}
+
+.container .main .profile .img-bg {
+  background: #ee9b00;
+}
+
+.container .main .profile .myImg img {
+  margin-left: 9rem;
+  margin-top: 7rem;
+  margin-bottom: -2rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 2px solid #ffbf00;
+}
+.container .main .profile .myImg .p_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8rem;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.container .main .profile .myImg .role {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.container .main .profile .myImg .role .the_role {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.container .main .profile .myImg .role .official_role {
+  color: #ffbf00;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-left: 8px;
+}
+.container .main .profile {
+  margin-left: 2rem;
+}
+
+.container .main .profile .my_form {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  width: 100%;
+}
+.container .main .profile .my_form .photo_name {
+  display: grid;
+  gap: .8rem;
+}
+
+.container .main .profile .my_form .photo_name .changePhoto {
+  display: grid;
+  gap: .8rem;
+}
+
+.container .main .profile .my_form .photo_name .changePhoto label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+.container .main .profile .my_form .photo_name .changePhoto input {
+  padding: 8px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  background: white;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+.container .main .profile .my_form .photo_name .name{
+  display: grid;
+  gap: .8rem;
+}
+
+
+.container .main .profile .my_form .photo_name .name label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+.container .main .profile .my_form .photo_name .name input {
+  padding: 8px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  background: white;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 7px;
+}
+.container .main .profile .my_form .email_num {
+  display: grid;
+  gap: 1rem;
+}
+.container .main .profile .my_form .email_num .email {
+  display: grid;
+  gap: .8rem;
+}
+
+.container .main .profile .my_form .email_num .email label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+.container .main .profile .my_form .email_num .email input {
+  padding: 8px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  background: white;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+.container .main .profile .my_form .email_num .num {
+  display: grid;
+  gap: .8rem;
+}
+
+.container .main .profile .my_form .email_num .num label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+.container .main .profile .my_form .email_num .num input {
+  padding: 8px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  background: white;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+.container .main .profile form .bio label {
+  font-size: 1.2rem;
+  margin-left: 1.6rem;
+  color: white;
+  font-weight: 500;
+}
+.container .main .profile form .bio textarea {
+  height: 20vh;
+  padding-top: 1rem;
+  padding-left: 8px;
+  padding-bottom: 1rem;
+  padding-right: 8px;
+  border: 1px solid #ffbf00;
+  background: white;
+  border-radius: 5px;
+  width: 98%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  resize: none;
+  color: black;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-left: 1.6rem;
+}
+.container .main .profile form .update_profile {
+  width: 100%;
+  padding: 8px;
+  margin-top: 1rem;
+  margin-left: 1.6rem;
+  background: #ffbf00;
+  color: black;
   font-size: 1.2rem;
   font-weight: 600;
+  margin-bottom: 1rem;
   cursor: pointer;
-  cursor: pointer;
-  position: relative;
-  background: white;
-  text-decoration: none;
-  overflow: hidden;
-  z-index: 1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   transition: all 400ms ease;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;
   -o-transition: all 400ms ease;
-  border-radius: 5rem;
-  -webkit-border-radius: 5rem;
-  -moz-border-radius: 5rem;
-  -ms-border-radius: 5rem;
-  -o-border-radius: 5rem;
-  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
-  margin-bottom: 1rem;
 }
 
-.container .main .profile form button::before{
-  content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+.container .main .profile form .update_profile:hover{
+  background: whitesmoke;
+  color: #ee9b00;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+  .container {
+    height: 200vh;
     background: black;
-    transform: translateX(-100%);
-    transition: all 0.3s;
-    z-index: -1;
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
+    margin: 0;
+    padding: .8rem;
+  }
+  .container .main .profile {
+    border: 2px solid #ffbf00;
+    display: grid;
+    height: 180vh;
+  }
+  .container .main  .myAcct {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .container .main .profile .myImg {
+    background: white;
+    width: 333%;
+    height: 30%;
+  }
+  
+  .container .main .profile .img-bg {
+    background: #ee9b00;
+  }
+  
+  .container .main .profile .myImg img {
+    margin-left: 10rem;
+    margin-top: 7rem;
+    margin-bottom: -2rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #ffbf00;
+  }
+  .container .main .profile .myImg .p_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .container .main .profile .myImg .role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .container .main .profile .myImg .role .the_role {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .container .main .profile .myImg .role .official_role {
+    color: #ffbf00;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 8px;
+  }
+  
+  .container .main .profile .my_form {
+    padding: .8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    top: 71%;
+    width: 89%;
+    margin-left: -8.5rem;
+  }
+  .container .main .profile .my_form .photo_name {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .photo_name .changePhoto {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .photo_name .changePhoto label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .photo_name .changePhoto input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+  }
+  
+  .container .main .profile .my_form .photo_name .name{
+    display: grid;
+    gap: .8rem;
+  }
+  
+  
+  .container .main .profile .my_form .photo_name .name label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .photo_name .name input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+  }
+  .container .main .profile .my_form .email_num {
+    display: grid;
+    gap: 1rem;
+  }
+  .container .main .profile .my_form .email_num .email {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .email_num .email label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .email_num .email input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+  }
+  
+  .container .main .profile .my_form .email_num .num {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .email_num .num label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .email_num .num input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+  }
+
+  .container .main .profile form .bio{
+    position: absolute;
+    top: 140%;
+    left: 0%;
+  }
+  
+  .container .main .profile form .bio label {
+    font-size: 1.2rem;
+    margin-left: 1.6rem;
+    color: white;
+    font-weight: 500;
+  }
+  .container .main .profile form .bio textarea {
+    height: 20vh;
+    padding-top: 1rem;
+    padding-left: 8px;
+    padding-bottom: 1rem;
+    padding-right: 8px;
+    border: 1px solid #ffbf00;
+    background: white;
+    border-radius: 5px;
+    width: 91%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    resize: none;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-left: 1.6rem;
+  }
+  .container .main .profile form .update_profile {
+    width: 89%;
+    padding: 8px;
+    position: absolute;
+    top: 180%;
+    left: 0%;
+    background: #ffbf00;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+  }
+  
+  .container .main .profile form .update_profile:hover{
+    background: whitesmoke;
+    color: #ee9b00;
+  }
+  
 }
-.container .main .profile form button:hover::before{
-  transform: translateX(0);
-}
-.container .main .profile form button:hover{
-  color: #ffbf00;
+
+@media screen and (max-width: 320px){
+  .container {
+    height: 200vh;
+    background: black;
+    margin: 0;
+    padding: .8rem;
+  }
+  .container .main .profile {
+    border: 2px solid #ffbf00;
+    display: grid;
+    height: 180vh;
+  }
+  .container .main  .myAcct {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .container .main .profile .myImg {
+    background: white;
+    width: 333%;
+    height: 30%;
+  }
+  
+  .container .main .profile .img-bg {
+    background: #ee9b00;
+  }
+  
+  .container .main .profile .myImg img {
+    margin-left: 6rem;
+    margin-top: 7rem;
+    margin-bottom: -2rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #ffbf00;
+  }
+  .container .main .profile .myImg .p_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .container .main .profile .myImg .role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .container .main .profile .myImg .role .the_role {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .container .main .profile .myImg .role .official_role {
+    color: #ffbf00;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 8px;
+  }
+  
+  .container .main .profile .my_form {
+    padding: .8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    top: 71%;
+    width: 89%;
+    left: 45%;
+  }
+  .container .main .profile .my_form .photo_name {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .photo_name .changePhoto {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .photo_name .changePhoto label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .photo_name .changePhoto input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+    width: 90%;
+  }
+  
+  .container .main .profile .my_form .photo_name .name{
+    display: grid;
+    gap: .8rem;
+  }
+  
+  
+  .container .main .profile .my_form .photo_name .name label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .photo_name .name input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+    width: 90%;
+  }
+  .container .main .profile .my_form .email_num {
+    display: grid;
+    gap: 1rem;
+  }
+  .container .main .profile .my_form .email_num .email {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .email_num .email label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .email_num .email input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+    width: 90%;
+  }
+  
+  .container .main .profile .my_form .email_num .num {
+    display: grid;
+    gap: .8rem;
+  }
+  
+  .container .main .profile .my_form .email_num .num label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+  }
+  .container .main .profile .my_form .email_num .num input {
+    padding: 8px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    background: white;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 7px;
+    width: 90%;
+  }
+
+  .container .main .profile form .bio{
+    position: absolute;
+    top: 140%;
+    left: 0%;
+  }
+  
+  .container .main .profile form .bio label {
+    font-size: 1.2rem;
+    margin-left: 1.6rem;
+    color: white;
+    font-weight: 500;
+  }
+  .container .main .profile form .bio textarea {
+    height: 20vh;
+    padding-top: 1rem;
+    padding-left: 8px;
+    padding-bottom: 1rem;
+    padding-right: 8px;
+    border: 1px solid #ffbf00;
+    background: white;
+    border-radius: 5px;
+    width: 80%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    resize: none;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-left: 1.6rem;
+  }
+  .container .main .profile form .update_profile {
+    width: 89%;
+    padding: 8px;
+    position: absolute;
+    top: 180%;
+    left: 0%;
+    background: #ffbf00;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+  }
+  
+  .container .main .profile form .update_profile:hover{
+    background: whitesmoke;
+    color: #ee9b00;
+  }
+  
 }

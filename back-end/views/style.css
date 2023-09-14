@@ -59,7 +59,13 @@ body {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+
 }
+.container h3{
+    font-size: 1.5rem;
+    color: white;
+}
+
 .container .verify{
     background: #ffbf00;
     color: white;

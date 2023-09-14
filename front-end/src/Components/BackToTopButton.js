@@ -1,5 +1,5 @@
 import React from 'react'
-// import "./Back.css"
+import "./BackToTop.css"
 import { useEffect, useState } from 'react'
 
 const BackToTopButton = () => {
@@ -24,10 +24,10 @@ const BackToTopButton = () => {
   return (
     <div>
         { backToTopBtn && (
-            <button style={{
+            <button className='backCss' style={{
                 position: "fixed",
                 bottom: "50px",
-                right: "30px",
+                right: "35px",
                 height: "30px",
                 width: "30px",
                 fontSize: "30px",

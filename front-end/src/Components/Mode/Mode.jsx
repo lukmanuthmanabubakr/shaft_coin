@@ -11,7 +11,7 @@ const Mode = () => {
 
   return (
     <div>
-      <button onClick={handleToggleMode}>
+      <button onClick={handleToggleMode} style={{display: "none"}}>
         {isDarkMode ? <FaSun style={{color: "red"}}/> : <FaMoon style={{color: "blue"}}/>}
       </button>
     </div>

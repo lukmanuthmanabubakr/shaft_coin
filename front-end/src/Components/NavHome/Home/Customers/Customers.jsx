@@ -51,7 +51,7 @@ const Customers = () => {
               <div className="services" data-aos="fade-up">
                 <img src={servises} alt="store" />
               </div>
-              <div className='content' data-aos="fade-down">
+              <div className='content' data-aos="fade-up">
               <p className="header">{header}</p>
               <p className="secondHeader">{secondHeader}</p>
               <p className='text'>{content}</p>

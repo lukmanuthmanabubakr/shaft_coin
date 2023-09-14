@@ -16,6 +16,7 @@
   letter-spacing: 2px;
   margin-bottom: 2rem;
   user-select: none;
+  
 }
 .Aspect-1-section .Aspect-1-section-intro .intese_content span {
   color: #ffbf00;
@@ -48,7 +49,21 @@
   -o-border-radius: 2rem;
   overflow: hidden;
   background: transparent;
+  animation: myright 2s 2;
+  animation-timing-function: linear;
+  -webkit-animation: myright 2s 1;
 }
+
+@keyframes myright {
+  from {
+      left: -6rem;
+  }
+
+  to {
+      left: 0px;
+  }
+}
+
 
 .Aspect-1-section .Aspect-1-section-intro .get-start::before {
   content: "";
@@ -73,9 +88,7 @@
   scale: 1.1;
 }
 
-.Aspect-1-section .Aspect-1-section-intro .get-start:active {
-  scale: 1;
-}
+
 
 .Aspect-1-section .Aspect-1-section-intro .intese_content-2 {
   margin-top: 2rem;
@@ -96,13 +109,14 @@
   width: 65%;
   height: 60vh;
   margin-top: 5rem;
+  display: none;
 }
 
 /************************ media query *************************************/
 
 
 /* Media query for max-width 320px */
-@media screen and  (max-width: 320px) {
+@media (min-width: 100px) and (max-width: 320px) {
   .Aspect-1-section {
     display: block;
   }
@@ -122,15 +136,14 @@
   }
 
   .Aspect-1-section .Aspect-1-section-intro .intese_content-2 {
-    font-size: 1rempx;
-    width: 100%;
+    font-size: 1rem;
+    width: 98.5%;
     margin-bottom: -1rem;
-    margin-left: 1.1rem;
+    margin-left: 1.2rem;
+    
   }
   .Aspect-1-section .Aspect-1-section-intro .get-start{
-   padding: 8px;
-   margin-left: 1.7rem;
-   
+   display: none;
 }
 
 .Aspect-1-section .Aspect-1-section-quicky {
@@ -141,14 +154,17 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid white;
     width: 90%;
-    height: 40vh;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    height: 50vh;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    margin-left: .8rem;
+
   }
 }
 
 
-@media (max-width: 480px) {
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .Aspect-1-section {
     display: block;
   }
@@ -157,24 +173,25 @@
     padding: 1rem;
   }
 
+
+
   .Aspect-1-section .Aspect-1-section-intro .intese_content {
-    font-size: 2.5rem;
-    margin-bottom: 1.4rem;
-    flex-wrap: wrap;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
     letter-spacing: 0;
-    margin-left: 1.9rem;
+    margin-left: 1.5rem;
   }
 
   .Aspect-1-section .Aspect-1-section-intro .intese_content-2 {
-    font-size: 1.1rem;
-    width: 90%;
+    font-size: 1rem;
+    width: 98%;
     margin-bottom: -1rem;
-    margin-left: 1.8rem;
+    margin-left: 1.4rem;
+    
   }
   .Aspect-1-section .Aspect-1-section-intro .get-start{
-   padding: 8px;
-   font-size: 1rem;
-   margin-left: 2.3rem;
+    display: none;
 }
 
 .Aspect-1-section .Aspect-1-section-quicky {
@@ -184,10 +201,10 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid white;
-    width: 70%;
-    height: 60vh;
-    margin-top: 3rem;
-    margin-left: 4rem;
-    margin-bottom: -3rem;
+    width: 85%;
+    height: 55vh;
+    margin-top: 1.5rem;
+    margin-bottom: 6rem;
+    margin-left: 1.2rem;
   }
 }

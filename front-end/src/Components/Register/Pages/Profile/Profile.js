@@ -17,7 +17,7 @@ const upload_preset = process.env.REACT_APP_UPLOAD_PRESET;
 
 export const shortenText = (text, numOfCharc) => {
   if (text.length > numOfCharc) {
-     const shortenedText = text.substring(0, numOfCharc).concat("...");
+    const shortenedText = text.substring(0, numOfCharc).concat("...");
 
     return shortenedText;
   }
@@ -27,9 +27,7 @@ export const shortenText = (text, numOfCharc) => {
 const Profile = () => {
   UseRedirectLogOutUser("/login");
   const dispatch = useDispatch();
-  const {user } = useSelector(
-    (state) => state.auth
-  );
+  const { user } = useSelector((state) => state.auth);
 
   const initialState = {
     name: user?.name || "",
@@ -124,59 +122,72 @@ const Profile = () => {
             <PageMenu />
           </div>
 
+          <h2 className="myAcct">My Profile</h2>
+
           <div className="profile">
-            <h2 className="myAcct">My Profile</h2>
+            <div className="myImg">
+              <div className="img-bg">
+                <img
+                  src={
+                    imagePreview === null && !user?.photo
+                      ? defaultAvatar
+                      : imagePreview || user?.photo
+                  }
+                />
+              </div>
 
-            <div>
-              <img
-                src={
-                  imagePreview === null && !user?.photo
-                    ? defaultAvatar
-                    : imagePreview || user?.photo
-                }
-              />
+              <div className="role">
+                <span className="the_role">Role:</span>
+                <span className="official_role">{profile.role}</span>
+              </div>
 
-              <h3 className="role">Role: <span>{profile.role}</span></h3>
+              <p className="p_name">{profile?.name}</p>
             </div>
 
             <form onSubmit={saveProfile}>
-              <p className="changePhoto">
-                <label>Change Photo: </label>
-                <input
-                  type="file"
-                  accept="image/*"
-                  name="image"
-                  onChange={handleImageChange}
-                />
-              </p>
-              <p className="name">
-                <label>Name:</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={profile?.name}
-                  onChange={handleInputChange}
-                />
-              </p>
-              <p className="email">
-                <label>Email: </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={profile?.email}
-                  onChange={handleInputChange}
-                  disabled
-                />
-              </p>
-              <p className="num">
-                <label>PhoneNumber: </label>
-                <input
-                  type="number"
-                  name="phoneNumber"
-                  value={profile?.phoneNumber}
-                  onChange={handleInputChange}
-                />
-              </p>
+              <div className="my_form">
+                <div className="photo_name">
+                  <p className="changePhoto">
+                    <label>Change Photo: </label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      name="image"
+                      onChange={handleImageChange}
+                    />
+                  </p>
+                  <p className="name">
+                    <label>Username:</label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={profile?.name}
+                      onChange={handleInputChange}
+                    />
+                  </p>
+                </div>
+                <div className="email_num">
+                  <p className="email">
+                    <label>Email: </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={profile?.email}
+                      onChange={handleInputChange}
+                      disabled
+                    />
+                  </p>
+                  <p className="num">
+                    <label>Phone: </label>
+                    <input
+                      type="number"
+                      name="phoneNumber"
+                      value={profile?.phoneNumber}
+                      onChange={handleInputChange}
+                    />
+                  </p>
+                </div>
+              </div>
               <p className="bio">
                 <label>Bio: </label>
                 <textarea
@@ -188,7 +199,7 @@ const Profile = () => {
                 ></textarea>
               </p>
               <p>
-                <button>Update Profile</button>
+                <button className="update_profile">Update Profile</button>
               </p>
             </form>
           </div>

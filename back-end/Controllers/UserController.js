@@ -9,7 +9,11 @@ const Token = require("../Models/tokenModel");
 const crypto = require("crypto");
 const Cryptr = require("cryptr");
 
+const { OAuth2Client } = require("google-auth-library");
+
 const cryptr = new Cryptr(process.env.CRYPTR_KEY);
+
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 //Register User
 
@@ -194,9 +198,7 @@ const sendLoginCode = asyncHandler(async (req, res) => {
   if (!userToken) {
     res.status(404);
     throw new Error("Invalid or expired token, please login again");
-
   }
-
 
   const loginCode = userToken.lToken;
   const decryptedLoginCode = cryptr.decrypt(loginCode);
@@ -224,7 +226,6 @@ const sendLoginCode = asyncHandler(async (req, res) => {
     res.status(500);
     throw new Error("Email not sent, please try again");
   }
-  
 });
 
 //Verification Email
@@ -289,8 +290,6 @@ const sendVerificationEmail = asyncHandler(async (req, res) => {
     throw new Error("Email not sent, please try again");
   }
 });
-
-
 
 //verify user
 const verifyUser = asyncHandler(async (req, res) => {
@@ -436,7 +435,8 @@ const getUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
-    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } = user;
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+      user;
 
     res.status(200).json({
       _id,
@@ -626,9 +626,8 @@ const changePassword = asyncHandler(async (req, res) => {
 const loginWithCode = asyncHandler(async (req, res) => {
   // res.send("Login with code")
 
-
-  const {email} = req.params
-  const {loginCode} = req.body
+  const { email } = req.params;
+  const { loginCode } = req.body;
 
   const user = await User.findOne({ email });
 
@@ -641,36 +640,36 @@ const loginWithCode = asyncHandler(async (req, res) => {
 
   const userToken = await Token.findOne({
     userId: user.id,
-    expiresAt: {$gt: Date.now()}
+    expiresAt: { $gt: Date.now() },
   });
 
   if (!userToken) {
-    res.status(404)
-    throw new Error("Invalid or expires login, please login Again")
+    res.status(404);
+    throw new Error("Invalid or expires login, please login Again");
   }
   const decryptedLoginCode = cryptr.decrypt(userToken.lToken);
 
-  if(loginCode !== decryptedLoginCode) {
-    res.status(404)
-    throw new Error("Incorrect login, please login again")
-  }else{
+  if (loginCode !== decryptedLoginCode) {
+    res.status(404);
+    throw new Error("Incorrect login, please login again");
+  } else {
     //Register user Agent
     const ua = parser(req.headers["user-agent"]);
     const thisUserAgent = ua.ua;
 
     user.userAgent.push(thisUserAgent);
-    await user.save()
+    await user.save();
 
     const token = generateToken(user._id);
 
-  //send HTTP-only cookie
-  res.cookie("token", token, {
-    path: "/",
-    httpOnly: true,
-    expires: new Date(Date.now() + 1000 * 86400), //1 day
-    sameSite: "none",
-    secure: true,
-  });
+    //send HTTP-only cookie
+    res.cookie("token", token, {
+      path: "/",
+      httpOnly: true,
+      expires: new Date(Date.now() + 1000 * 86400), //1 day
+      sameSite: "none",
+      secure: true,
+    });
 
     const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
       user;
@@ -688,11 +687,101 @@ const loginWithCode = asyncHandler(async (req, res) => {
       token,
     });
   }
-  
+});
 
+const loginWithGoogle = asyncHandler(async (req, res) => {
+  const { userToken } = req.body;
+  // console.log(userToken);
 
-})
+  const ticket = await client.verifyIdToken({
+    idToken: userToken,
+    audience: process.env.GOOGLE_CLIENT_ID,
+  });
+  const payload = ticket.getPayload();
+  const { name, email, picture, sub } = payload;
+  const password = Date.now() + sub;
 
+  //get user AGENT
+  const ua = parser(req.headers["user-agent"]);
+  const userAgent = [ua.ua];
+
+  //Check if user exists
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    //Create new user
+    const newUser = await User.create({
+      name,
+      email,
+      password,
+      photo: picture,
+      isVerified: true,
+      userAgent,
+    });
+
+    if (newUser) {
+      //Generate Token
+
+      const token = generateToken(newUser._id);
+
+      //send HTTP-only cookie
+      res.cookie("token", token, {
+        path: "/",
+        httpOnly: true,
+        expires: new Date(Date.now() + 1000 * 86400), //1 day
+        sameSite: "none",
+        secure: true,
+      });
+
+      const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+        newUser;
+
+      res.status(201).json({
+        _id,
+        name,
+        email,
+        phoneNumber,
+        bio,
+        photo,
+        role,
+        token,
+        isVerified,
+        token,
+      });
+    }
+  }
+
+  //user Exists
+
+  if (user) {
+    const token = generateToken(user._id);
+
+    //send HTTP-only cookie
+    res.cookie("token", token, {
+      path: "/",
+      httpOnly: true,
+      expires: new Date(Date.now() + 1000 * 86400), //1 day
+      sameSite: "none",
+      secure: true,
+    });
+
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+      user;
+
+    res.status(201).json({
+      _id,
+      name,
+      email,
+      phoneNumber,
+      bio,
+      photo,
+      role,
+      token,
+      isVerified,
+      token,
+    });
+  }
+});
 
 module.exports = {
   registerUser,
@@ -711,11 +800,8 @@ module.exports = {
   resetPassword,
   changePassword,
   sendLoginCode,
-  loginWithCode
+  loginWithCode,
+  loginWithGoogle,
 };
 
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-

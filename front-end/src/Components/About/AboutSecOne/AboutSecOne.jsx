@@ -76,6 +76,7 @@ const AboutSecOne = () => {
       </div>
 
    <div>
+   
    <div  data-aos="zoom-in-down"><h1 className="provide">Shaft.Coin <span className="glance">- At a Glance</span></h1></div>
       <div>
       <p className="myCoin" data-aos="fade-up">

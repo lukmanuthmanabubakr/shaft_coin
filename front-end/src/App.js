@@ -17,7 +17,6 @@ import PageMenu from "./Components/Register/Component/PageMenu/PageMenu";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Wallet from "./Components/Register/Wallet/Wallet";
 import { useDispatch, useSelector } from "react-redux";
 import { getLoginStatus, getUser, selectIsLoggedIn, selectUser } from "./Components/Register/Redux/Features/Auth/authSlice";
 import ChangePassword from "./Components/Register/ChangePassWord/ChangePass";
@@ -31,8 +30,13 @@ import Customers from "./Components/NavHome/Home/Customers/Customers";
 import WhyUs from "./Components/NavHome/Home/WhyUs/WhyUs";
 import ContactMe from "./Components/NavHome/Home/ContactMe/ContactMe";
 import Footer from "./Components/NavHome/Home/Footer/Footer";
-import Send from "./Components/GetStart/Send/Send";
 import History from "./Components/GetStart/History/History";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import Wallet from "./Components/GetStart/Wallet/Wallet"
+import Dash from "./Components/GetStart/Work/DashBoard/Dash";
+import Amount from "./Components/Amount/Amount";
+import AmountBtc from "./Components/Amount/AmountBtc/AmountBtc";
+import Converter from "./Components/GetStart/Work/DashBoard/Converter/Converter";
 
 
 axios.defaults.withCredentials = true;
@@ -58,6 +62,7 @@ function App() {
   return (
     <div className="app-app">
       <ToastContainer />
+      <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
       {loading ? (
         <HashLoader
           className="app"
@@ -72,15 +77,18 @@ function App() {
           <Route path="/" element={<NavHome />} />
           <Route path="/get-start/home" element={<GetStart />} />
           <Route path="/get-start/wallet" element={<Wallet />} />
+          <Route path="/get-start/amount" element={<Amount />} />
+          <Route path="/get-start/amount/amountbtc" element={<AmountBtc />} />
+          <Route path="/get-start/amount/conveter" element={<Converter/>} />
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/get-start/profile" element={<Profile />} />
-          <Route path="/get-start/send" element={<Send/>} />
           <Route path="/get-start/transaction-history" element={<History/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot" element={<Forgot />} />
-          <Route path="/pageMenu" element={<PageMenu />} />
+          <Route path="/forgot" element={<Forgot />} />
+          <Route path="/dash" element={<Dash/>} />
           <Route path="/verify/:verificationToken" element={<Verify />} />
           <Route path="/resetPassword/:resetToken" element={<Reset />} />
           <Route path="/changepassword" element={<ChangePassword/>} />
@@ -88,6 +96,7 @@ function App() {
           <Route path="/loginwithcode/:email" element={<LoginWithCode />} />
         </Routes>
       )}
+      </GoogleOAuthProvider>
       {/* <Card/> */}
     </div>
   );

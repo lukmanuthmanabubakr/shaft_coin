@@ -1,12 +1,13 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { RESET, verifyUser } from '../../Redux/Features/Auth/authSlice';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import "./Verify.css"
 
 
 const Verify = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {verificationToken} = useParams()
   console.log(verificationToken);
 
@@ -14,6 +15,8 @@ const Verify = () => {
   const verifyAccount = async () => {
     await dispatch(verifyUser(verificationToken))
     await dispatch(RESET())
+    navigate("/get-start/home")
+
   }
   return (
     <section className='verify_us'>

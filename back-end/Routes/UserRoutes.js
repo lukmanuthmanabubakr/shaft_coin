@@ -21,7 +21,8 @@ const {
   resetPassword,
   changePassword,
   sendLoginCode,
-  loginWithCode
+  loginWithCode,
+  loginWithGoogle
 } = require("../Controllers/UserController");
 
 const router = express.Router();
@@ -48,6 +49,8 @@ router.patch("/changePassword", protect, changePassword );
 
 router.post("/sendLoginCode/:email",  sendLoginCode );
 router.post("/loginWithCode/:email",  loginWithCode );
+
+router.post("/google/callback",  loginWithGoogle );
 
 
 module.exports = router;
