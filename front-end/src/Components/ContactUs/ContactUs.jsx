@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import Logo from "../../Asset/logo.png";
+import emailjs from "@emailjs/browser";
 import axios from "axios";
-import emailjs from "emailjs-com";
 import { v4 as uuidv4 } from "uuid";
 import "./ContactUs.css";
-import Footer from "../NavHome/Home/Footer/Footer";
 import Navbar from "../NavHome/Navbar/Navbar";
+import { toast } from "react-toastify";
+import Footer from "../NavHome/Home/Footer/Footer";
 
 const initialState = {
-  fname: "",
   lname: "",
-  email: "",
   number: "",
   company: "",
 };
@@ -26,6 +24,7 @@ const ContactUs = () => {
   };
 
   const form = useRef();
+
   const [countryState, setCountryState] = useState({
     loading: false,
     countries: [],
@@ -83,6 +82,19 @@ const ContactUs = () => {
     navigate("/");
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_whapo8x', 'template_22bl2cs', form.current, 'HVqXGdPVDe0II42XK')
+      .then((result) => {
+          console.log(result.text);
+          toast.success("Message sent successfully")
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <>
       <section className="contactMe">
@@ -92,35 +104,19 @@ const ContactUs = () => {
         <h1 className="tense">Contact Us</h1>
 
         <div className="mainInbox">
-          <form ref={form}>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="inboxTwo">
               <div className="inboxTwo_1">
                 <label>First Name:</label>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  name="fname"
-                  required
-                  // value={fname}
-                  // onChange={handleInputChange}
-                />
+                <input type="text" name="f_name" />
                 <label>Email:</label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  required
-                  // value={email}
-                  // onChange={handleInputChange}
-                />
+                <input type="email" name="email" />
                 <label>Telegram:</label>
                 <input
                   type="tel"
                   placeholder="Telegram"
-                  name="number"
+                  name="telegram_number"
                   required
-                  // value={number}
-                  // onChange={handleInputChange}
                 />
               </div>
               <div className="inboxTwo_2">
@@ -129,9 +125,7 @@ const ContactUs = () => {
                   type="text"
                   required
                   placeholder="Last Name"
-                  name="lname"
-                  // value={lname}
-                  // onChange={handleInputChange}
+                  name="l_name"
                   className="text-inp"
                 />
                 <label className="myPhone">Phone Number:</label>
@@ -178,6 +172,7 @@ const ContactUs = () => {
                             required
                             placeholder="Phone"
                             maxLength={10}
+                            name="phone_number"
                           />
                         </div>
                       </div>
@@ -189,30 +184,21 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="Company Name"
-                  name="company"
+                  name="company_name"
                   required
-                  // value={company}
-                  // onChange={handleInputChange}
                   className="text-input"
                 />
               </div>
             </div>
             <div className="textArea">
               <label>How Can We help</label>
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                required
-              ></textarea>
+              <textarea name="message" />
             </div>
-
-            <button type="submit" className="btn_submit">
-              Send Message
-            </button>
+            <input className="btn_submit" type="submit" value="Send" />
           </form>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </>
   );
 };

@@ -11,6 +11,7 @@ import NavList from "../NavList/NavList";
 import { ShowOnLogIn } from "../../Register/Component/Protect/HiddenLink";
 import { UserName } from "../../Register/Pages/Profile/Profile";
 import DropDownMenu from "../../../DropDown/DropDownMenu";
+import DashBoard from "../Work/DashBoard/DashBoard";
 
 
 const GetStart = () => {
@@ -66,7 +67,7 @@ const GetStart = () => {
 
       <div className="container">
       <NavList/>
-      <WalletDashBoard/>
+      <DashBoard/>
       </div>
     </section>
   );

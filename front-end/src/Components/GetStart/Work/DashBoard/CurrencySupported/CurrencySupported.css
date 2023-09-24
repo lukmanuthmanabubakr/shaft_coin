@@ -1,0 +1,33 @@
+.currencySupported{
+    margin-top: -2rem;
+}
+.currenOp{
+    padding: 8px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    cursor: pointer;
+}
+
+.currensup {
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  
+  .currensup .currenOp {
+    cursor: pointer;
+    background-color: #fff;
+    color: #333; 
+    border-bottom: 1px solid #ccc;
+    padding: 8px; 
+  }
+  

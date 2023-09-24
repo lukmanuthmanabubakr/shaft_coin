@@ -36,7 +36,10 @@ import Wallet from "./Components/GetStart/Wallet/Wallet"
 import Dash from "./Components/GetStart/Work/DashBoard/Dash";
 import Amount from "./Components/Amount/Amount";
 import AmountBtc from "./Components/Amount/AmountBtc/AmountBtc";
-import Converter from "./Components/GetStart/Work/DashBoard/Converter/Converter";
+import PaymentAspect from "./Components/PaymentAspect/PaymentAspect";
+import SendMoneyConvert from "./Components/GetStart/Work/DashBoard/SendMoneyConvert/SendMoneyConvert";
+import LocateUserFunds from "./Components/LocateUserFunds/LocateUserFunds";
+import ReceiverAmount from "./Components/GetStart/ReceiverAmount/ReceiverAmount";
 
 
 axios.defaults.withCredentials = true;
@@ -77,9 +80,12 @@ function App() {
           <Route path="/" element={<NavHome />} />
           <Route path="/get-start/home" element={<GetStart />} />
           <Route path="/get-start/wallet" element={<Wallet />} />
+          <Route path="/get-start/SendMoneyConvert" element={<SendMoneyConvert/> } />
+          <Route path="/get-start/SendMoneyConvert/user" element={<LocateUserFunds/>} />
+          <Route path="/get-start/SendMoneyConvert/receiverAmount" element={<ReceiverAmount/>} />
           <Route path="/get-start/amount" element={<Amount />} />
           <Route path="/get-start/amount/amountbtc" element={<AmountBtc />} />
-          <Route path="/get-start/amount/conveter" element={<Converter/>} />
+          <Route path="/get-start/amount/PaymentAspect" element={<PaymentAspect/>} />
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />

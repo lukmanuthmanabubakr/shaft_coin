@@ -1,4 +1,4 @@
-/* .amountSec{
+.amountSec{
     margin: 0;
     outline: 0;
   }
@@ -55,9 +55,7 @@
     background: white;
     color: orange;
   }
-  .amountSec .btc{
-  }
-  .amountSec .btc .much{
+  .locateUserSec .sender{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,25 +65,69 @@
     margin-bottom: 2rem;
     margin-top: 3rem;
   }
-  .amountSec .amountBtc{
-    background-color: whitesmoke;
-    border: 2px solid #ffbf00;
-    padding: 3rem 2rem;
+  .locateUserSec .shaftBank a{
+    background-color: #ffffff;
+    padding: 2rem 1rem;
     position: absolute;
-    top: 45%;
+    top: 42%;
     transform: translate(-50%, -50%);
     left: 50%;
-    width: 25%;
+    width: 30vw;
     box-shadow: 0 1.25rem 1.8 rgba();
     max-width: 37.5rem;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-}
- */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .locateUserSec .bank a{
+    background-color: #ffffff;
+    padding: 2rem 1rem;
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 30vw;
+    box-shadow: 0 1.25rem 1.8 rgba();
+    max-width: 37.5rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .locateUserSec .shaftBank .shaftId{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 500;
+  }
+  .locateUserSec .shaftBank .avatar{
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 800;
+  }
+  .locateUserSec .bank .shaftId{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 500;
+  }
+  .locateUserSec .bank .avatar{
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 800;
+  }

@@ -7,11 +7,16 @@
     gap: 4rem;
 }
 .navList ul li a {
-    color: white;
+    color: rgb(160, 158, 158);
     font-size: 1.2rem;
     font-weight: 600;
     display: flex;
     align-items: center;
+    transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
 }
 .navList ul li a .icon{
     color: #ffbf00;
@@ -30,10 +35,28 @@
     color: #ffbf00;
     padding-right: 8px;
 }
-.navList .contact a .get{
-    color: white;
-    padding-right: 8px;
+.navList .contact a .get:hover{
+    color: whitesmoke;
 }
+.navList .contact a .get{
+    color: rgb(160, 158, 158);
+    padding-right: 8px;
+    transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.navList .contact a .get.active{
+    color: white;
+}
+.navList ul li a:hover {
+    color: whitesmoke;
+  }
+  
+  .navList ul li a.active {
+    color: white;
+  }
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){

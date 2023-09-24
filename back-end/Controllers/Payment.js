@@ -32,8 +32,8 @@ const balanceWithDraw = asyncHandler(async (req, res) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
     body: JSON.stringify({
@@ -135,8 +135,8 @@ const apiKey = asyncHandler(async (req, res) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
   };
@@ -156,8 +156,8 @@ const transaction = asyncHandler(async (req, res) => {
     method: "GET",
     headers: {
       accept: "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
   };
@@ -177,8 +177,8 @@ const transactionSummary = asyncHandler(async (req, res) => {
     method: "GET",
     headers: {
       accept: "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
   };
@@ -198,8 +198,8 @@ const payment = asyncHandler(async (req, res) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
     body: JSON.stringify({
@@ -228,8 +228,8 @@ const transferFunds = asyncHandler(async (req, res) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
     body: JSON.stringify({
@@ -255,8 +255,8 @@ const balanceConvert = asyncHandler(async (req, res) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "X-Api-User": "oladimeji",
-      "X-Api-Key": "c95ad5321aba42a39c916fbad99ce43f--1709915170542--dba1b62b",
+      "X-Api-User": process.env.COINPROFILE_NAME,
+      "X-Api-Key": process.env.COINPROFILE_KEY,
       "X-User-Version": "v2",
     },
     body: JSON.stringify({

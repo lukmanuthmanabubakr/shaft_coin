@@ -76,12 +76,12 @@ const data = [
     image: Soliu,
     Name: "Soliu",
     Carrier: "Software Developer",
-    About:
-      "Soliu is a software developer, he is a very good team worker incidunt quaerat maxime debitis at! Ad aliquam hic iusto",
+    About: "Soliu is a software developer, he is a very good team worker incidunt quaerat maxime debitis at! Ad aliquam hic iusto",
     Linledin: "https://www.linkedin.com/in/soliu-ahmad-31b049240/",
     Twitter: "https://twitter.com/ahmadsoliu1",
   },
 ];
+
 
 const isMobileView = () => window.innerWidth <= (320, 480, 600);
 
@@ -103,11 +103,17 @@ const Sponsors = () => {
         }}
         navigation
         modules={[Autoplay, Pagination, Navigation]}
+        
       >
+      
         {data.map(({ id, Name, Carrier, image, title, About }, index) => {
           return (
+            
             <SwiperSlide key={index}>
-              <div className="mentors-description">
+            {isMobileView() ? (
+                      <></>
+                    ) : (
+                      <div className="mentors-description">
                 <div className="mentors-description-content">
                   <div className="content">
                     <img src={image} alt={title} />
@@ -119,15 +125,27 @@ const Sponsors = () => {
                       <AiFillStar />
                     </h1> */}
 
-                    <h1>
-                      <AiFillStar />
-                    </h1>
+                   
 
-                    <img src={celo} alt="celo" className="celo" />
+                    {isMobileView() ? (
+                      <></>
+                    ) : (
+                      <h1>
+                      <AiFillStar />
+                    </h1> 
+                    )}
+                    {/* <img src={celo} alt="celo" /> */}
+                    {isMobileView() ? (
+                      <></>
+                    ) : (
+                      <img src={celo} alt="celo" />
+                    )}
                   </div>
                 </div>
                 <p className="title">{About}</p>
               </div>
+                    )}
+              
             </SwiperSlide>
           );
         })}
@@ -135,52 +153,5 @@ const Sponsors = () => {
     </div>
   );
 };
-//{
-//   return (
-//     <div className="mentors">
-//      {
-//       data.map(({id, title, image, Name, Carrier, About}) => {
-//         return(
-//           <div className="mentors-description">
-// <div className="mentors-description-content">
-//   <div className="content">
-//     <img src={image} alt={title} />
 
-//   </div>
-// </div>
-{
-  /* <p className="title">
-{About}
-</p>
-</div>
-        )
-      })
-     } */
-}
-//     </div>
-
-//   );
-// };
-
-export default Sponsors;
-
-{
-  /* <div className="mentors-description">
-<div className="mentors-description-content">
-  <div className="content">
-    <img src={Director} alt="director" />
-    <h1>Aliu Musa</h1>
-    <p>Blockchain Engineer</p>
-  </div>
-  <div className="star">
-    <h1>
-      <AiFillStar />
-    </h1>
-    <img src={celo} alt="celo" />
-  </div>
-</div>
-<p className="title">
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae nulla excepturi aut iste tempora corporis voluptatum quae facere. Magni eveniet placeat aliquid, sint incidunt quaerat maxime debitis at! Ad aliquam hic iusto
-</p>
-</div> */
-}
+export default Sponsors

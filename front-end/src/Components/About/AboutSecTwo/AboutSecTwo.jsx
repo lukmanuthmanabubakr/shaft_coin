@@ -3,7 +3,9 @@ import Sponsors from '../../NavHome/Home/Aspect1/Sponsors/Sponsors'
 
 const AboutSecTwo = () => {
   return (
-    <div><Sponsors/></div>
+    <div>
+      <Sponsors/>
+    </div>
   )
 }
 

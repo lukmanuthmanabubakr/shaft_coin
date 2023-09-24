@@ -4,7 +4,7 @@ import "./Aspect1.css";
 import { Typewriter } from 'react-simple-typewriter'
 
 const Aspect1 = () => {
-  const isMobileView = () => window.innerWidth <= 320;
+  const isMobileView = () => window.innerWidth >= 320;
   return (
     <>
       <section className="Aspect-1-section">
@@ -13,8 +13,8 @@ const Aspect1 = () => {
         {isMobileView() ? (
           <h1 className="intese_content">
             Bridging <span>fiat</span> and <span>crypto</span> global the
-            {""}
-            <span className="typewriter" style={{ color: "#ffbf00", fontWeight: "bold" }}>
+            World
+            {/* <span className="typewriter" style={{ color: "#ffbf00", fontWeight: "bold" }}>
               <Typewriter
                 words={["Economies", "World", "Universe"]}
                 loop={true}
@@ -24,7 +24,7 @@ const Aspect1 = () => {
                 deleteSpeed={50}
                 delaySpeed={1000}
               />
-            </span>
+            </span> */}
           </h1>
           ) : (
           <h1 className="intese_content">

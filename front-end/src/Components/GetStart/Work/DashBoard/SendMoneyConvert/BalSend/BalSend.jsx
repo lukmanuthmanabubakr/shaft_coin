@@ -1,9 +1,9 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "./Balance.css"
+import "./BalSend.css"
 
-const Balance = ({currency}) => {
+const BalSend = () => {
   // const [balance, setBalance] = useState(0);
   const [amount, setAmount] = useState("");
   const [isUsd, setIsUsd] = useState(false)
@@ -17,6 +17,9 @@ const Balance = ({currency}) => {
       .then(({data}) => {
         setBalances(data?.data?.balances)
         console.log(data?.data?.balances);
+        setAmount(data?.data?.balances?.[0]?.currency);
+        setBalances(data?.data?.balances?.[0]?.formattedAmount);
+        console.log(data?.data?.balances, 'guihfuiduifuidh');
       })
       .catch((error) => {
         console.error("Error fetching balance:", error);
@@ -26,26 +29,9 @@ const Balance = ({currency}) => {
     <div className="currency">
     <span className="note"></span>
 
-    {balances && (
-      <>
-        {currency === balances[0].currency && (
-          <div className="amountRate">
-            <p className="amount">{balances[0].currency}</p>
-            <p className="rate">{balances[0].formattedAmount.toLocaleString()}</p>
-          </div>
-        )}
-
-        {currency === balances[1].currency && (
-          <div className="amountRate">
-            <p className="amount">{balances[1].currency}</p>
-            <p className="rate">{(balances[1].formattedAmount.toLocaleString())}</p>
-            </div>
-        )}
-      </>
-    )}
   </div>
   );
 };
 
-export default Balance;
+export default BalSend;
 

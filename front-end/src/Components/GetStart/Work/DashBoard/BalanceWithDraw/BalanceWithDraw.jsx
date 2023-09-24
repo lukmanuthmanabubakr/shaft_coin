@@ -9,7 +9,7 @@ const BalanceWithDraw = () => {
       .post("http://localhost:5000/payment/user/balance/withdraw")
       .then((response) => {
         setResponseData(response.data);
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);

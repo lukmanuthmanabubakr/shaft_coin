@@ -16,7 +16,7 @@ const ApiKey = () => {
       console.error("Error fetching API key:", error);
     }
   };
-  return <div></div>;
+  return <div><button onClick={fetchApiKey}>fetch</button></div>;
 };
 
 export default ApiKey;

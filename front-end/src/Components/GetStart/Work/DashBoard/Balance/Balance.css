@@ -1,5 +1,4 @@
-.currency .rate{
-    color: black;
-    font-size: .9rem;
-    font-weight: 500;
+.currency .amountRate{
+    display: flex;
+    text-align: center;
 }
