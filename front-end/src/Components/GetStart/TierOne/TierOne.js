@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./GetStart.css";
-import DropDownMenu from "../../DropDown/DropDownMenu";
-import defaultAvatar from "../../Asset/tartar.webp";
-import Logo from "../../Asset/logo.png";
+import "../GetStart.css";
+import Logo from "../../../Asset/logo.png";
+import defaultAvatar from "../../../Asset/tartar.webp";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { ShowOnLogIn } from "../Register/Component/Protect/HiddenLink";
-import { UserName } from "../Register/Pages/Profile/Profile";
 import { useSelector } from "react-redux";
-import NavList from "./NavList/NavList";
-import UseRedirectLogOutUser from "../Register/Component/customHook/UseRedirectLogOutUser";
-import DashBoard from "./Work/DashBoard/DashBoard";
+import TierOneDashBoard from "./TierOneDashBoard/TierOneDashBoard";
+import UseRedirectLogOutUser from "../../Register/Component/customHook/UseRedirectLogOutUser";
+import { ShowOnLogIn } from "../../Register/Component/Protect/HiddenLink";
+import { UserName } from "../../Register/Pages/Profile/Profile";
+import DropDownMenu from "../../../DropDown/DropDownMenu";
+import NavList from "../NavList/NavList";
 
 
-const GetStart = () => {
+const TierOne = () => {
   UseRedirectLogOutUser("/login");
   const [openProfile, setOpenProfile] = useState(false);
   const { user } = useSelector(
@@ -66,10 +66,10 @@ const GetStart = () => {
 
       <div className="container">
       <NavList/>
-      <DashBoard/>
+      <TierOneDashBoard/>
       </div>
     </section>
   );
 };
 
-export default GetStart;
+export default TierOne;

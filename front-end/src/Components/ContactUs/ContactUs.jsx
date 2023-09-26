@@ -74,7 +74,6 @@ const ContactUs = () => {
     return false;
   });
 
-  console.log("searchSelectedCountryData", searchSelectedCountryData);
 
   const navigate = useNavigate();
 

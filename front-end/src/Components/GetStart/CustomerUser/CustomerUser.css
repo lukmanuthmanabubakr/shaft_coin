@@ -1,0 +1,116 @@
+.formModal{
+    background: #ffbf00;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 30vw;
+    box-shadow: 0 1.25rem 1.8 rgba();
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.formModal .inboxen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formModal .rsCross{
+    cursor: pointer;
+    color: black;
+}
+.formModal .create{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.formModal .modal-content{
+    display: grid;
+    margin-top: 8px;
+}
+
+.formModal .modal-content label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.formModal .modal-content input{
+    background: white;
+    color: black;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 2px solid #ffbf00;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+}
+.formModal .modal-content option{
+    cursor: pointer;
+}
+.formModal .modal-content select{
+    background: black;
+    color: #ffbf00;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.formModal .modal-content .formBtn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+  
+.formModal .modal-content .formBtn:hover::before {
+    transform: translateX(0);
+  }
+.formModal .modal-content .formBtn:hover {
+    color: #ffbf00;
+  }
+.formModal .modal-content .formBtn{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+    margin-top: .5rem;
+}

@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const userRoute = require("./Routes/UserRoutes");
 const errorHandler = require("./MiddleWare/ErrorMiddleWare");
 const jwt = require("jsonwebtoken");
-const PaymentRoute = require("./Routes/Payment");
+const Payment = require("./Routes/Payment");
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.use(
 
 //Routes
 app.use("/api/users", userRoute);
-app.use("/payment/user", PaymentRoute);
+app.use("/payment/users", Payment);
 
 app.get("/", (req, res) => {
   res.send("Home Page");

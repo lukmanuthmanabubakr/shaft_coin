@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavHome from "./Components/NavHome/NavHome";
 import GetStart from "./Components/GetStart/GetStart";
-import HashLoader from "react-spinners/HashLoader";
 import About from "./Components/About/About";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Register from "./Components/Register/Pages/Auth/Register";
@@ -32,14 +31,8 @@ import ContactMe from "./Components/NavHome/Home/ContactMe/ContactMe";
 import Footer from "./Components/NavHome/Home/Footer/Footer";
 import History from "./Components/GetStart/History/History";
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Wallet from "./Components/GetStart/Wallet/Wallet"
-import Dash from "./Components/GetStart/Work/DashBoard/Dash";
-import Amount from "./Components/Amount/Amount";
-import AmountBtc from "./Components/Amount/AmountBtc/AmountBtc";
-import PaymentAspect from "./Components/PaymentAspect/PaymentAspect";
-import SendMoneyConvert from "./Components/GetStart/Work/DashBoard/SendMoneyConvert/SendMoneyConvert";
-import LocateUserFunds from "./Components/LocateUserFunds/LocateUserFunds";
-import ReceiverAmount from "./Components/GetStart/ReceiverAmount/ReceiverAmount";
+import Loader from "./Loader/Loader";
+import TierOne from "./Components/GetStart/TierOne/TierOne";
 
 
 axios.defaults.withCredentials = true;
@@ -55,37 +48,25 @@ function App() {
       dispatch(getUser());
     }
   }, [dispatch, isLoggedIn, user]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+  const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  setTimeout(() => {
+    setLoading(false);
+  }, 2000);
+}, []);
+
   return (
     <div className="app-app">
       <ToastContainer />
       <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
       {loading ? (
-        <HashLoader
-          className="app"
-          color={"#FFBF00"}
-          loading={loading}
-          size={50}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
+        <Loader/>
       ) : (
         <Routes>
           <Route path="/" element={<NavHome />} />
           <Route path="/get-start/home" element={<GetStart />} />
-          <Route path="/get-start/wallet" element={<Wallet />} />
-          <Route path="/get-start/SendMoneyConvert" element={<SendMoneyConvert/> } />
-          <Route path="/get-start/SendMoneyConvert/user" element={<LocateUserFunds/>} />
-          <Route path="/get-start/SendMoneyConvert/receiverAmount" element={<ReceiverAmount/>} />
-          <Route path="/get-start/amount" element={<Amount />} />
-          <Route path="/get-start/amount/amountbtc" element={<AmountBtc />} />
-          <Route path="/get-start/amount/PaymentAspect" element={<PaymentAspect/>} />
+          <Route path="/get-start/tier-one" element={<TierOne/>} />
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />
@@ -94,7 +75,6 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/forgot" element={<Forgot />} />
-          <Route path="/dash" element={<Dash/>} />
           <Route path="/verify/:verificationToken" element={<Verify />} />
           <Route path="/resetPassword/:resetToken" element={<Reset />} />
           <Route path="/changepassword" element={<ChangePassword/>} />
