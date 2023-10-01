@@ -7,11 +7,11 @@ display: flex;
 justify-content: space-between;
 }
 .dashBoard{
-  color: white;
   border: 2px solid #ffbf00;
   height: 60vh;
   margin-top: 1.5rem;
-  background: #FAF9F6;
+  background: white;
+  /* background: #FAF9F6; */
   padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;

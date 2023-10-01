@@ -15,57 +15,66 @@ const cryptr = new Cryptr(process.env.CRYPTR_KEY);
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
+
 //Register User
 
+
 const registerUser = asyncHandler(async (req, res) => {
+  // Extract data from request body
   const { name, email, password } = req.body;
 
-  //Validation
+  // Generate random account number
+  const randomAccountNumber = Math.floor(Math.random() * 10 ** 10).toString().padStart(10, '0');
+
+
+
+
+  // Validation checks
   if (!name || !email || !password) {
     res.status(400);
     throw new Error("Please fill in all required fields");
   }
+
   if (password.length < 6) {
     res.status(400);
     throw new Error("Password must be at least 6 characters");
   }
 
-  //check if user exist
+  // Check if user already exists
   const userExists = await User.findOne({ email });
-
   if (userExists) {
     res.status(400);
     throw new Error("Email already exists");
   }
 
-  //get user AGENT
+  // Get user agent
   const ua = parser(req.headers["user-agent"]);
   const userAgent = [ua.ua];
 
-  //Create new user
+  // Create new user
   const user = await User.create({
     name,
     email,
     password,
     userAgent,
+    randomAccountNumber,
+    userBalance: 0,
   });
 
-  //Generate Token
-
+  // Generate Token
   const token = generateToken(user._id);
 
-  //send HTTP-only cookie
+  // Set HTTP-only cookie
   res.cookie("token", token, {
     path: "/",
     httpOnly: true,
-    expires: new Date(Date.now() + 1000 * 86400), //1 day
+    expires: new Date(Date.now() + 1000 * 86400), // 1 day
     sameSite: "none",
     secure: true,
   });
 
   if (user) {
-    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
-      user;
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified, randomAccountNumber,userBalance } = user;
 
     res.status(201).json({
       _id,
@@ -77,13 +86,15 @@ const registerUser = asyncHandler(async (req, res) => {
       role,
       token,
       isVerified,
-      token,
+      randomAccountNumber,
+      userBalance
     });
   } else {
     res.status(400);
     throw new Error("Invalid user data");
   }
 });
+
 
 //Login User
 
@@ -160,7 +171,7 @@ const loginUser = asyncHandler(async (req, res) => {
       secure: true,
     });
 
-    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified, randomAccountNumber , userBalance } =
       user;
 
     res.status(200).json({
@@ -173,6 +184,8 @@ const loginUser = asyncHandler(async (req, res) => {
       token,
       role,
       isVerified,
+      randomAccountNumber ,
+      userBalance
     });
   } else {
     res.status(500);
@@ -435,7 +448,7 @@ const getUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
-    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified,randomAccountNumber,userBalance } =
       user;
 
     res.status(200).json({
@@ -447,6 +460,8 @@ const getUser = asyncHandler(async (req, res) => {
       photo,
       role,
       isVerified,
+      randomAccountNumber,
+      userBalance
     });
   } else {
     res.status(404);
@@ -481,6 +496,8 @@ const updateUser = asyncHandler(async (req, res) => {
       photo: updatedUser.photo,
       role: updatedUser.role,
       isVerified: updatedUser.isVerified,
+      randomAccountNumber: updatedUser.randomAccountNumber,
+      userBalance: updatedUser.userBalance
     });
   } else {
     res.status(404);
@@ -671,7 +688,7 @@ const loginWithCode = asyncHandler(async (req, res) => {
       secure: true,
     });
 
-    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified,randomAccountNumber, userBalance } =
       user;
 
     res.status(200).json({
@@ -685,6 +702,8 @@ const loginWithCode = asyncHandler(async (req, res) => {
       token,
       isVerified,
       token,
+      randomAccountNumber,
+      userBalance
     });
   }
 });
@@ -717,6 +736,8 @@ const loginWithGoogle = asyncHandler(async (req, res) => {
       photo: picture,
       isVerified: true,
       userAgent,
+      randomAccountNumber,
+      userBalance
     });
 
     if (newUser) {
@@ -733,7 +754,7 @@ const loginWithGoogle = asyncHandler(async (req, res) => {
         secure: true,
       });
 
-      const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+      const { _id, name, email, phoneNumber, bio, photo, role, isVerified,randomAccountNumber,userBalance } =
         newUser;
 
       res.status(201).json({
@@ -747,6 +768,8 @@ const loginWithGoogle = asyncHandler(async (req, res) => {
         token,
         isVerified,
         token,
+        randomAccountNumber,
+        userBalance
       });
     }
   }
@@ -765,7 +788,7 @@ const loginWithGoogle = asyncHandler(async (req, res) => {
       secure: true,
     });
 
-    const { _id, name, email, phoneNumber, bio, photo, role, isVerified } =
+    const { _id, name, email, phoneNumber, bio, photo, role, isVerified,randomAccountNumber,userBalance } =
       user;
 
     res.status(201).json({
@@ -779,6 +802,8 @@ const loginWithGoogle = asyncHandler(async (req, res) => {
       token,
       isVerified,
       token,
+      randomAccountNumber,
+      userBalance
     });
   }
 });

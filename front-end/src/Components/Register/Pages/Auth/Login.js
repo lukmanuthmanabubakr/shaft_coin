@@ -13,7 +13,6 @@ import {
 } from "../../Redux/Features/Auth/authSlice";
 import Logo from "../../../../Asset/logo.png";
 import "./Login.css";
-import Mode from "../../../Mode/Mode";
 import { GoogleLogin } from "@react-oauth/google";
 
 const initialState = {
@@ -97,7 +96,7 @@ const Login = () => {
           </NavLink>
         </div>
         <div>
-          <Mode />
+          <div></div>
         </div>
       </div>
       <div className="loginContainer">

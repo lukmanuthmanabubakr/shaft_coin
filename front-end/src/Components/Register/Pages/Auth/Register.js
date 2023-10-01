@@ -12,6 +12,7 @@ import {
   RESET,
   sendVerificationEmail,
 } from "../../Redux/Features/Auth/authSlice";
+import PaymentLoader from "../../../../PaymentLoader/PaymentLoader";
 
 const initialState = {
   name: "",
@@ -116,7 +117,6 @@ const Register = () => {
   return (
    <section className="register-section">
      <div className="registerAspect">
-      {isLoading && "loading..."}
         <div>
           <h2>Register</h2>
 
@@ -194,6 +194,7 @@ const Register = () => {
             <button type="submit" className="btn-submit">
               Register
             </button>
+            {isLoading && <PaymentLoader/>}
           </form>
 
           <span className="home-log">

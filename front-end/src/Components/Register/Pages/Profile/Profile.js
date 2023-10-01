@@ -37,6 +37,7 @@ const Profile = () => {
     photo: user?.photo || "",
     role: user?.role || "",
     isVerified: user?.isVerified || false,
+    randomAccountNumber: user?.randomAccountNumber || "",
   };
 
   const [profile, setProfile] = useState(initialState);
@@ -109,6 +110,7 @@ const Profile = () => {
         bio: user.bio,
         role: user.role,
         isVerified: user.isVerified,
+        randomAccountNumber: user.randomAccountNumber,
       });
     }
   }, [user]);
@@ -188,6 +190,16 @@ const Profile = () => {
                   </p>
                 </div>
               </div>
+              <p className="account_num">
+                <label>Account Number</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={profile?.randomAccountNumber}
+                  onChange={handleInputChange}
+                  disabled
+                />
+              </p>
               <p className="bio">
                 <label>Bio: </label>
                 <textarea
@@ -198,6 +210,7 @@ const Profile = () => {
                   onChange={handleInputChange}
                 ></textarea>
               </p>
+              
               <p>
                 <button className="update_profile">Update Profile</button>
               </p>

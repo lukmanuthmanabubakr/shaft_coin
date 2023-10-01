@@ -1,0 +1,94 @@
+.myInboxes{
+    display: flex;
+    justify-content: space-between;
+}
+.myInboxes .userBalances .add_send{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.myInboxes .userBalances .add_send a{
+    color: #ffbf00;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.myInboxes .userBalances{
+    background: black;
+    padding: 1rem;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    width: 40%;
+}
+.myInboxes .userBalances .selectUserBal{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.myInboxes .userBalances .selectUserBal .currency{
+  font-weight: 500;
+}
+.myInboxes .userBalances .selectUserBal .balUser{
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.myInboxes .acct_balance{
+    background: #ff7d00;
+    padding: 1rem;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    width: 40%;
+}
+
+.myInboxes .acct_balance.userBalance{
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 600;
+}
+
+
+.copyContain {
+    display: flex;
+    align-items: center;
+  }
+  
+  .copyAcctun {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  
+  .copyNum input {
+    font-size: 1em;
+    padding-left: 1.2rem;
+    user-select: none;
+  }
+  
+  .copy-button {
+    background-color: black;
+    color: #ffbf00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+  }
+  
+  .copy-button:hover {
+background-color: whitesmoke;
+    color: black;
+
+  }
+  

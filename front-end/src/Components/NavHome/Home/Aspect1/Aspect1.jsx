@@ -12,8 +12,7 @@ const Aspect1 = () => {
         <div className="Aspect-1-section-intro">
         {isMobileView() ? (
           <h1 className="intese_content">
-            Bridging <span>fiat</span> and <span>crypto</span> global the
-            World
+          Facilitating <span>payments across</span> global borders, <span>bridging</span>  and digital currencies
             {/* <span className="typewriter" style={{ color: "#ffbf00", fontWeight: "bold" }}>
               <Typewriter
                 words={["Economies", "World", "Universe"]}
@@ -36,8 +35,7 @@ const Aspect1 = () => {
             <span>Get Started</span>
           </NavLink>
           <p className="intese_content-2">
-            Crucial payment support for Web3 platforms is here. Enable your
-            users to buy and sell crypto from your app.
+          Empower your users to make seamless payments through your app, offering essential support for both Web 2.0 and other platforms
           </p>
         </div>
         <div className="Aspect-1-section-quicky"></div>

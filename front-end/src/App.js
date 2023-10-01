@@ -17,7 +17,12 @@ import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getLoginStatus, getUser, selectIsLoggedIn, selectUser } from "./Components/Register/Redux/Features/Auth/authSlice";
+import {
+  getLoginStatus,
+  getUser,
+  selectIsLoggedIn,
+  selectUser,
+} from "./Components/Register/Redux/Features/Auth/authSlice";
 import ChangePassword from "./Components/Register/ChangePassWord/ChangePass";
 import UserList from "./Components/Register/Pages/UserList/UserList";
 import Navbar from "./Components/NavHome/Navbar/Navbar";
@@ -30,61 +35,71 @@ import WhyUs from "./Components/NavHome/Home/WhyUs/WhyUs";
 import ContactMe from "./Components/NavHome/Home/ContactMe/ContactMe";
 import Footer from "./Components/NavHome/Home/Footer/Footer";
 import History from "./Components/GetStart/History/History";
-import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import Loader from "./Loader/Loader";
-import TierOne from "./Components/GetStart/TierOne/TierOne";
-
+import AddDashBoard from "./Components/GetStart/Work/AddMoney/CompileAdd";
+import SendMoneyCompnent from "./Components/GetStart/Work/SendMoney/SendMoneyCompnent";
+// import TierOne from "./Components/GetStart/TierOne/TierOne";
+// import AuthContextProvider from "./Store/AuthContextProvider";
 
 axios.defaults.withCredentials = true;
 
 function App() {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(selectIsLoggedIn)
-    const user = useSelector(selectUser)
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectUser);
   useEffect(() => {
     dispatch(getLoginStatus());
 
-    if(isLoggedIn && user === null) {
+    if (isLoggedIn && user === null) {
       dispatch(getUser());
     }
   }, [dispatch, isLoggedIn, user]);
   const [loading, setLoading] = useState(true);
 
-useEffect(() => {
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
-}, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   return (
-    <div className="app-app">
-      <ToastContainer />
-      <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-      {loading ? (
-        <Loader/>
-      ) : (
-        <Routes>
-          <Route path="/" element={<NavHome />} />
-          <Route path="/get-start/home" element={<GetStart />} />
-          <Route path="/get-start/tier-one" element={<TierOne/>} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/get-start/profile" element={<Profile />} />
-          <Route path="/get-start/transaction-history" element={<History/>} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot" element={<Forgot />} />
-          <Route path="/forgot" element={<Forgot />} />
-          <Route path="/verify/:verificationToken" element={<Verify />} />
-          <Route path="/resetPassword/:resetToken" element={<Reset />} />
-          <Route path="/changepassword" element={<ChangePassword/>} />
-          <Route path="/user" element={<UserList/>} />
-          <Route path="/loginwithcode/:email" element={<LoginWithCode />} />
-        </Routes>
-      )}
-      </GoogleOAuthProvider>
-      {/* <Card/> */}
-    </div>
+    <>
+      <div className="app-app">
+        <ToastContainer />
+        <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+          {loading ? (
+            <Loader />
+          ) : (
+            <Routes>
+              <Route path="/" element={<NavHome />} />
+              <Route path="/get-start/home" element={<GetStart />} />
+              <Route path="/get-start/home/add-money" element={<AddDashBoard/> } />
+              <Route path="/get-start/home/send-money" element={<SendMoneyCompnent /> } />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/get-start/profile" element={<Profile />} />
+              <Route
+                path="/get-start/transaction-history"
+                element={<History />}
+              />
+              <Route path="/register" element={<Register />} />
+              <Route path="/forgot" element={<Forgot />} />
+              <Route path="/forgot" element={<Forgot />} />
+              <Route path="/verify/:verificationToken" element={<Verify />} />
+              <Route path="/resetPassword/:resetToken" element={<Reset />} />
+              <Route path="/changepassword" element={<ChangePassword />} />
+              <Route path="/user" element={<UserList />} />
+              <Route path="/loginwithcode/:email" element={<LoginWithCode />} />
+            </Routes>
+          )}
+        </GoogleOAuthProvider>
+        {/* <Card/> */}
+      </div>
+    </>
+    // AuthContextProvider
+    // AuthContextProvider
   );
 }
 

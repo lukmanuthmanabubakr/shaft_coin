@@ -12,30 +12,30 @@ const data = [
   {
     id: 1,
     logo: <BsUnity />,
-    content: "ipsum dolor sit amet consectetur adipisicing elit",
+    content: "Competitive Fees",
     innerContent:
-      "Blanditiis quos Voluptates commodi reiciendis voluptas illum vitae perferendis soluta est, ut laboriosam provident veniam velit et itaque suscipit magni quis veritatis dolores aliquam dolor id necessitatibus, corporis labore accusamus",
+      "High transaction fees associated with digital payments impede the digital inclusion agenda. We are offering lower fees as compared to our competitiors",
   },
   {
     id: 2,
     logo: <IoFlashSharp />,
-    content: "ipsum dolor sit amet consectetur adipisicing elit",
+    content: "More Convenience",
     innerContent:
-      "Blanditiis quos Voluptates commodi reiciendis voluptas illum vitae perferendis soluta est, ut laboriosam provident veniam velit et itaque suscipit magni quis veritatis dolores aliquam dolor id necessitatibus, corporis labore accusamus",
+      "Digital payments are becoming the preferred choice of payment for goods and services. We are offering many more easy payment channels that lead to higher customer conversion rates",
   },
   {
     id: 3,
     logo: <TbSend />,
-    content: "ipsum dolor sit amet consectetur adipisicing elit",
+    content: "Success sweet Rate",
     innerContent:
-      "Blanditiis quos Voluptates commodi reiciendis voluptas illum vitae perferendis soluta est, ut laboriosam provident veniam velit et itaque suscipit magni quis veritatis dolores aliquam dolor id necessitatibus, corporis labore accusamus",
+      "Payment systems are core to the success of digital businesses. Our seamless architecture promises over 95% + uptime and faster real-time transactions",
   },
   {
     id: 4,
     logo: <MdPayment />,
-    content: "ipsum dolor sit amet consectetur adipisicing elit",
+    content: "Aiming SME Digi-Payment Partnership Program",
     innerContent:
-      "Blanditiis quos Voluptates commodi reiciendis voluptas illum vitae perferendis soluta est, ut laboriosam provident veniam velit et itaque suscipit magni quis veritatis dolores aliquam dolor id necessitatibus, corporis labore accusamus",
+      "SMEs form more than 90% of businesses in Africa yet there are many barriers to digitization. Eligible SMEs receive flexible terms of services and support tailored to their business needs.",
   },
 ];
 const Aspect2 = () => {
@@ -48,11 +48,10 @@ const Aspect2 = () => {
     <section className="Aspect2">
       <div className="Aspect2-send" data-aos="fade-up">
         <h1>
-          Send, spend and earn with <span>crypto</span> and <span>cash</span>
+          Send, Save and earn with <span>card</span> and <span>cash</span>
         </h1>
         <p className="crypto">
-          Live your life on crypto. Make day-to-day spending a breeze with cash
-          any time you need it
+        Experience the freedom of living on digital currency
         </p>
       </div>
 

@@ -7,7 +7,7 @@
 .container .main .profile {
   border: 2px solid #ffbf00;
   display: grid;
-  height: 80vh;
+  height: 88vh;
   background: black;
   grid-template-columns: 30% 60%;
 }
@@ -181,6 +181,30 @@
   margin-bottom: 7px;
 }
 
+.container .main .profile form .account_num{
+  display: grid;
+}
+.container .main .profile form .account_num label {
+  font-size: 1.2rem;
+  margin-left: 1.6rem;
+  color: white;
+  font-weight: 500;
+}
+.container .main .profile form .account_num input {
+  padding: 8px;
+  box-shadow: rgba(2, 2, 2, 0.2) 0px 8px 24px;
+  background: white;
+  font-weight: 500;
+  color: black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 7px;
+  margin-top: 1rem;
+  margin-left: 1.6rem;
+}
 .container .main .profile form .bio label {
   font-size: 1.2rem;
   margin-left: 1.6rem;

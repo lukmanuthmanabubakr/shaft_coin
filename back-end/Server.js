@@ -2,12 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const session = require('express-session');
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const userRoute = require("./Routes/UserRoutes");
 const errorHandler = require("./MiddleWare/ErrorMiddleWare");
 const jwt = require("jsonwebtoken");
-const Payment = require("./Routes/Payment");
+const PaymentRoute = require("./Routes/PaymentRoutes");
+const axios = require("axios")
 
 const app = express();
 
@@ -23,9 +25,16 @@ app.use(
   })
 );
 
+app.use(session({
+  secret: '(eehd7#$%^ndhd',
+  resave: false,
+  saveUninitialized: true,
+}));
+
 //Routes
 app.use("/api/users", userRoute);
-app.use("/payment/users", Payment);
+app.use("/api/payment", PaymentRoute);
+
 
 app.get("/", (req, res) => {
   res.send("Home Page");

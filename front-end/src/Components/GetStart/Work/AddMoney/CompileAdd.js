@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "../GetStart.css";
-import Logo from "../../../Asset/logo.png";
-import defaultAvatar from "../../../Asset/tartar.webp";
+import "../../GetStart.css";
+import defaultAvatar from "../../../../Asset/tartar.webp";
+import Logo from "../../../../Asset/logo.png";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import TierOneDashBoard from "./TierOneDashBoard/TierOneDashBoard";
-import UseRedirectLogOutUser from "../../Register/Component/customHook/UseRedirectLogOutUser";
-import { ShowOnLogIn } from "../../Register/Component/Protect/HiddenLink";
-import { UserName } from "../../Register/Pages/Profile/Profile";
-import DropDownMenu from "../../../DropDown/DropDownMenu";
-import NavList from "../NavList/NavList";
+import UseRedirectLogOutUser from "../../../Register/Component/customHook/UseRedirectLogOutUser";
+import { ShowOnLogIn } from "../../../Register/Component/Protect/HiddenLink";
+import { UserName } from "../../../Register/Pages/Profile/Profile";
+import DropDownMenu from "../../../../DropDown/DropDownMenu";
+import NavList from "../../NavList/NavList";
+import AddMoneyComponent from "./AddMoney";
 
 
-const TierOne = () => {
+const AddDashBoard = () => {
   UseRedirectLogOutUser("/login");
   const [openProfile, setOpenProfile] = useState(false);
   const { user } = useSelector(
@@ -42,7 +42,7 @@ const TierOne = () => {
           </p>
         </NavLink>
 
-        <p className="home">Home</p>
+        <p className="home">Add Money</p>
         <div
           className="select-option"
           onClick={() => setOpenProfile((prev) => !prev)}
@@ -58,7 +58,7 @@ const TierOne = () => {
           />
 
 
-            <UserName />
+            <UserName/>
           </ShowOnLogIn>
           {openProfile && <DropDownMenu />}
         </div>
@@ -66,10 +66,10 @@ const TierOne = () => {
 
       <div className="container">
       <NavList/>
-      <TierOneDashBoard/>
+      <AddMoneyComponent/>
       </div>
     </section>
   );
 };
 
-export default TierOne;
+export default AddDashBoard;

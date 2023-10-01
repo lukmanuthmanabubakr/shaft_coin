@@ -11,7 +11,7 @@ const NavList = () => {
     <nav className='navList'>
         <ul>
             <li><NavLink to='/get-start/home' activeClassName='active'> <span className='icon'><AiFillHome size={25}/></span> <span className='home'>Home</span></NavLink></li>
-            <li><NavLink to='/get-start/wallet' activeClassName='active'> <span className='icon'><FaWallet size={25}/></span> <span className='home'>Wallet</span></NavLink></li>
+            <li><NavLink to='/get-start/home/add-money' activeClassName='active'> <span className='icon'><FaWallet size={25}/></span> <span className='home'>Add Money</span></NavLink></li>
             <li><NavLink to='/get-start/profile' activeClassName='active'> <span className='icon'><BsPersonCircle size={25}/></span> <span className='home'>Profile</span></NavLink></li>
         </ul>
 

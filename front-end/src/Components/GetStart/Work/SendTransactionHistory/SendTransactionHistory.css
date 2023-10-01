@@ -1,0 +1,25 @@
+.transaction-history {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.transaction-list {
+  list-style-type: none;
+  padding: 0;
+  max-height: 120px; /* Set a max height for the list */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.transaction-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.transaction-details {
+  font-size: 16px;
+}
+
+.transaction-details strong {
+  font-weight: bold;
+}
