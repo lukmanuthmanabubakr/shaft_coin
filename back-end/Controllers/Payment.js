@@ -22,7 +22,9 @@ const AddMoney = asyncHandler(async (req, res) => {
   if (!amount || isNaN(amount)) {
     return res.status(400).json({ message: "Please provide both amount" });
   }
-
+  if(amount < 100) {
+    return res.status(400).json({ message: "Add minimum 100 N100" });
+  }
   if (!randomAccountNumber && !req.user) {
     return res.status(400).json({
       message:
@@ -31,12 +33,6 @@ const AddMoney = asyncHandler(async (req, res) => {
   }
 
   let user;
-
-  // if (randomAccountNumber) {
-  //   user = await User.findOne({ randomAccountNumber });
-  // } else {
-  //   user = await User.findById(req.user._id);
-  // }
 
   if (randomAccountNumber) {
     user = await User.findOneAndUpdate(
@@ -71,7 +67,7 @@ const AddMoney = asyncHandler(async (req, res) => {
 
     const notificationMessage = `${user.name} has added ${parseFloat(
       amount
-    )} to their account`;
+    )} successfully`;
 
     return res.status(200).json({
       message: notificationMessage,
@@ -98,7 +94,6 @@ const userBalance = asyncHandler(async (req, res) => {
   res.json({ userBalance });
 });
 
-
 const sendWallet = asyncHandler(async (req, res) => {
   const { amount, randomAccountNumber } = req.body;
   const senderUserId = req.user._id;
@@ -122,7 +117,9 @@ const sendWallet = asyncHandler(async (req, res) => {
     }
 
     if (sender.randomAccountNumber === randomAccountNumber) {
-      return res.status(400).json({ message: "Cannot send funds to your own wallet" });
+      return res
+        .status(400)
+        .json({ message: "Cannot send funds to your own wallet" });
     }
 
     await User.updateOne(
@@ -157,10 +154,13 @@ const sendWallet = asyncHandler(async (req, res) => {
 });
 
 const getSendTransactions = asyncHandler(async (req, res) => {
+  const userId = req.user._id;
   try {
-    const transactions = await SendWallet.find().sort({ dateTime: -1 });
+    const transactions = await SendWallet.find({
+      $or: [{ sender: userId }, { recipient: userId }],
+    }).sort({ time: -1 });
 
-    const formattedTransactions = transactions.map(transaction => {
+    const formattedTransactions = transactions.map((transaction) => {
       return {
         _id: transaction._id,
         sender: transaction.sender,
@@ -169,7 +169,7 @@ const getSendTransactions = asyncHandler(async (req, res) => {
         successful: transaction.successful,
         senderName: transaction.senderName,
         recipientName: transaction.recipientName,
-        dateTime: transaction.dateTime
+        dateTime: transaction.dateTime,
       };
     });
 
@@ -179,7 +179,6 @@ const getSendTransactions = asyncHandler(async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
-
 
 const addOrSendMoney = asyncHandler(async (req, res) => {
   const { amount, randomAccountNumber, action } = req.body;
@@ -237,8 +236,14 @@ const addOrSendMoney = asyncHandler(async (req, res) => {
         });
       }
 
-      await User.updateOne({ _id: sender._id }, { $inc: { userBalance: -amount } });
-      await User.updateOne({ _id: recipient._id }, { $inc: { userBalance: amount } });
+      await User.updateOne(
+        { _id: sender._id },
+        { $inc: { userBalance: -amount } }
+      );
+      await User.updateOne(
+        { _id: recipient._id },
+        { $inc: { userBalance: amount } }
+      );
     }
 
     const transactionType = action === "add" ? "Add Money" : "Send Money";
@@ -266,14 +271,11 @@ const addOrSendMoney = asyncHandler(async (req, res) => {
   }
 });
 
-
-
-
 module.exports = {
   getTransactions,
   AddMoney,
   userBalance,
   sendWallet,
   getSendTransactions,
-  addOrSendMoney
+  addOrSendMoney,
 };

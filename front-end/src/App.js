@@ -39,6 +39,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import Loader from "./Loader/Loader";
 import AddDashBoard from "./Components/GetStart/Work/AddMoney/CompileAdd";
 import SendMoneyCompnent from "./Components/GetStart/Work/SendMoney/SendMoneyCompnent";
+import Success from "./Succes-Page/Success";
 // import TierOne from "./Components/GetStart/TierOne/TierOne";
 // import AuthContextProvider from "./Store/AuthContextProvider";
 
@@ -79,6 +80,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/success-page" element={<Success /> } />
               <Route path="/get-start/profile" element={<Profile />} />
               <Route
                 path="/get-start/transaction-history"

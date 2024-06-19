@@ -1,16 +1,11 @@
 
 .background-clip{
     position: absolute;
+    top: 0;
     right: 0;
     bottom: 0;
     opacity: 0.5;
     left: 0;
-    width: 100%;
-}
-
-
-@media screen and (max-width: 768px){
-    .background-clip{
-        display: none;
-    }
+    width: auto;
+    height: 100%;
 }

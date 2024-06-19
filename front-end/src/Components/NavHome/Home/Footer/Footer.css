@@ -2,6 +2,18 @@
   height: 60vh;
   background: black;
 }
+.myFooter .copyWrite{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myFooter .copyWrite span{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffbf00;
+  padding-right: 8px;
+}
 .myFooter .footerStart article {
   display: flex;
   align-items: center;
@@ -71,7 +83,6 @@
   gap: 2rem;
   border-bottom: 1px solid #ffbf00;
   width: 100%;
-  
 }
 .myFooter .footerStart .socials a{
   margin-bottom: 3rem;

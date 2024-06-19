@@ -12,7 +12,7 @@ const Aspect1 = () => {
         <div className="Aspect-1-section-intro">
         {isMobileView() ? (
           <h1 className="intese_content">
-          Facilitating <span>payments across</span> global borders, <span>bridging</span>  and digital currencies
+          Digital <span>Finance</span> That <span>Fits Your</span> Life
             {/* <span className="typewriter" style={{ color: "#ffbf00", fontWeight: "bold" }}>
               <Typewriter
                 words={["Economies", "World", "Universe"]}

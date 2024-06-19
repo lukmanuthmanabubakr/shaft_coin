@@ -14,10 +14,7 @@ const About = () => {
       <AboutSecTwo/>
       <AboutSecThree/>
       <Footer/>
-      {/* 
-      <AboutSecThree/>
-      
-      <BackToTopButton/> */}
+      <BackToTopButton/>
     </>
   )
 }
