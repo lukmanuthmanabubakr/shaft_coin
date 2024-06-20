@@ -9,11 +9,11 @@ const NavHome = () => {
   return (
     <>
       <div className="home-nav-components">
-        <video autoPlay loop muted playsInline className="background-clip">
+      <video autoPlay loop muted playsInline className="background-clip">
         <source src={advert} type="video/mp4" />
       </video>
-        {/* <Navbar /> */}
-        {/* <Home /> */}
+       <Navbar />
+       {/*   <Home /> */}
       </div>
     </>
   );
