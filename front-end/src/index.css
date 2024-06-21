@@ -1,5 +1,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --navbar-background: #f9ebb2;
+  --navbar-text-color: #555555;
+  --navbar-logo--hover: #444;
+  --navbar-logo: #555555;
+  --navbar-logo-span-text: #f9ebb2;
+  --navbar-logo-span-bg: #555555;
+
+  --theme-Icon: #555555;
+  --theme-Icon-hover: #444;
+
+  --nav-toggler: #555555;
+  --scroll-bar: #f9ebb2;
+
+  /* btn */
+  --button-border-color: #555555;
+  --button-text-color: #555555;
+  --button-background-color: #f9ebb2;
+
+  --button-border-color-hover: #555555;
+  --button-text-color-hover: #f9ebb2;
+  --button-background-color-hover: #555555;
+
+  /* My first Section */
+
+  --hero-big-gradient-1: #f9ebb2;
+  --hero-big-gradient-2: #555555;
+
+  --second-content: #fdf7e1;
+
+  /* Section two */
+
+  --section-two-bg: #f9ebb2;
+  --section-two-text: #555555;
+
+  /* Market Range */
+
+  --market-range: #f9ebb2;
+  --market-range-border: #555555;
+  --market-range-money: #555555;
+  --market-range-source: #555555;
+
+  /* Liquidity */
+
+  --liquidity-bg: #f9ebb2;
+  --knowledge-content-1: #888;
+  --knowledge-content-2: #f9ebb2;
+  --knowledge-content-text: #555555;
+
+  --liquidity-text: #f9ebb2;
+  --liquidity-text-p: #f9ebb2;
+
+  /* liquidityAspectTwo */
+  --liquidityAspectTwo-bg: #f9ebb2;
+  --liquidityAspectTwo-border: #555555;
+  --box-shadow-liquidityAspectTwo: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --liquidityAspectTwo-head: #555555;
+
+  --liquidityBeyond: #555555;
+
+  --liquidityBeyond-hover: #444;
+
+  
+}
+
+[data-theme="dark"] {
+  --navbar-background: #555555;
+  --navbar-text-color: #f9ebb2;
+  --navbar-logo--hover: #f7e392;
+  --navbar-logo: #f9ebb2;
+  --navbar-logo-span-text: #555555;
+  --navbar-logo-span-bg: #f9ebb2;
+
+  --theme-Icon: #f9ebb2;
+  --theme-Icon-hover: #f7e392;
+
+  --nav-toggler: #f9ebb2;
+
+  --scroll-bar: #f9ebb2;
+
+  /* btn */
+  --button-border-color: #f9ebb2;
+  --button-text-color: #f9ebb2;
+  --button-background-color: #555555;
+
+  --button-border-color-hover: #555555;
+  --button-text-color-hover: #555555;
+  --button-background-color-hover: #f9ebb2;
+
+  /*My  first section */
+  --headerImage-bg: #555555;
+
+  --hero-big-gradient-1: #888;
+  --hero-big-gradient-2: #f9ebb2;
+
+  --second-content: #d5d5d5;
+
+  /* Section two */
+
+  --section-two-bg: #555555;
+  --section-two-text: #f9ebb2;
+
+  /* Market range */
+
+  --market-range: #555555;
+  --market-range-border: #f9ebb2;
+  --market-range-money: #f9ebb2;
+  --market-range-source: #f9ebb2;
+
+  /* Liquidity */
+
+  --liquidity-bg: #555555;
+  --knowledge-content-1: #f9ebb2;
+  --knowledge-content-2: #555555;
+  --knowledge-content-text: #f9ebb2;
+
+  --liquidity-text: #f9ebb2;
+  --liquidity-text-p: #f9ebb2;
+
+    /* liquidityAspectTwo */
+    --liquidityAspectTwo-bg: #555555;  
+    --liquidityAspectTwo-border: #f9ebb2;
+    --box-shadow-liquidityAspectTwo: 0 0 10px rgba(255, 255, 255, 0.1);
+
+    --liquidityAspectTwo-head: #f9ebb2;
+
+    --liquidityBeyond: #f9ebb2;
+    --liquidityBeyond-hover: #f7e392;
+
+
+  
+}
+
 * {
   padding: 0;
   margin: 0;

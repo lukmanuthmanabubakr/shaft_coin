@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../../Asset/logo.png";
 import "./Navbar.css";
-import { MdOutlineWbSunny } from "react-icons/md";
-import { FaRegMoon } from "react-icons/fa";
+import { FaTimes, FaBars } from "react-icons/fa";
 import About from "../../About/About";
 import ContactUs from "../../ContactUs/ContactUs";
 import {
@@ -13,6 +12,7 @@ import {
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
 
   const goHome = () => {
     navigate("/");
@@ -30,21 +30,38 @@ const Navbar = () => {
       </div>
 
       <div>
-        <div className="getStarted">
-          {switchTheme === "light" ? (
-            <MdOutlineWbSunny
-              className="sunIcon"
-              onClick={switchTheme}
-              size={25}
-            />
-          ) : (
-            <FaRegMoon className="sunIcon" onClick={switchTheme} size={25} />
-          )}
+        <div
+          className={isMobile ? "getStartedMobile" : "getStarted"}
+          onClick={() => setIsMobile(false)}
+        >
           <ShowOnLogOut>
             <NavLink to="/login" className="get-start">
               Login/SignUp
             </NavLink>
           </ShowOnLogOut>
+          {isMobile && (
+            <>
+              <NavLink to="/">
+                {" "}
+                <img src={Logo} alt="bird" />
+                <p>
+                  Shaft<span>Coin</span>
+                </p>
+              </NavLink>
+
+              <NavLink to="/about" className="abt">
+                About
+              </NavLink>
+              <NavLink to="/get-start/home" className="get">
+                Get Started
+              </NavLink>
+              <ShowOnLogIn>
+                <NavLink to="/contact-us" className="con">
+                  Contact
+                </NavLink>
+              </ShowOnLogIn>
+            </>
+          )}
         </div>
       </div>
     </nav>
