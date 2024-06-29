@@ -40,6 +40,7 @@ import Loader from "./Loader/Loader";
 import AddDashBoard from "./Components/GetStart/Work/AddMoney/CompileAdd";
 import SendMoneyCompnent from "./Components/GetStart/Work/SendMoney/SendMoneyCompnent";
 import Success from "./Succes-Page/Success";
+import Home from "./Components/NavHome/Home/Home";
 // import TierOne from "./Components/GetStart/TierOne/TierOne";
 // import AuthContextProvider from "./Store/AuthContextProvider";
 
@@ -67,13 +68,14 @@ function App() {
   return (
     <>
       <div className="app-app">
+      <Navbar />
         <ToastContainer />
         <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {loading ? (
             <Loader />
           ) : (
             <Routes>
-              <Route path="/" element={<NavHome />} />
+              {/* <Route path="/" element={<Home />} /> */}
               <Route path="/get-start/home" element={<GetStart />} />
               <Route path="/get-start/home/add-money" element={<AddDashBoard/> } />
               <Route path="/get-start/home/send-money" element={<SendMoneyCompnent /> } />
