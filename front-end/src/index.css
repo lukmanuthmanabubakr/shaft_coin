@@ -60,6 +60,35 @@ body {
   }
 }
 
+
+:root {
+  --claim-bg: #0052ff;
+  --claim-text: #fff;
+
+  --background-color: white;
+  --text-color: black;
+  --navbar-background: #f8f9fa;
+  --navbar-text-color: black;
+
+  --navbar-bg: #fff;
+  --navbar-text: #0052ff;
+  --coin-base-links: black;
+  --sign-in-bg: #d1d1d1;
+  --sign-in-bg-hover: #c4c4c4;
+  --sign-in-text: black;
+
+  --sign-up-bg: #0052ff;
+  --sign-up-bg-hover: #004ae8;
+  --sign-up-text: #fff;
+
+  --navbar-toggler: #0052ff;
+}
+
+[data-theme='dark'] {
+  --navbar-bg: #aa6d6d;
+  --navbar-text: #16be1e;
+}
+
 section {
   margin-top: 2rem;
   height: 100vh;
