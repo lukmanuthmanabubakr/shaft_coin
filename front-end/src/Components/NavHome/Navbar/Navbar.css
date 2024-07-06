@@ -1,0 +1,17 @@
+.navbarComponent{
+  background: var(--navbar-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.1rem;
+}
+.navbarComponent .familyOneForNavbar{
+  display: flex;
+  align-items: center;
+}
+.navbarComponent .familyOneForNavbar img{
+  height: 7rem;
+  width: 7rem;
+  background: red;
+  
+}

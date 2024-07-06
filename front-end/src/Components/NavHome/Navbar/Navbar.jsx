@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import shaftLogo from "../../../Assets/shaftCoin.png";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../../ThemeContext";
+import './Navbar.css'
 
 const Navbar = () => {
   const { toggleTheme } = useContext(ThemeContext);
   return (
-    <div>
-      <div>
+    <div className="navbarComponent">
+      <div className="familyOneForNavbar">
         <div>
           <img src={shaftLogo} alt="shaftCoin" />
         </div>
