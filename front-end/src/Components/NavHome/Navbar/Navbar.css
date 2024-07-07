@@ -3,15 +3,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0.1rem;
+  padding: 1rem 0.8rem;
 }
 .navbarComponent .familyOneForNavbar{
   display: flex;
   align-items: center;
 }
 .navbarComponent .familyOneForNavbar img{
-  height: 7rem;
-  width: 7rem;
-  background: red;
+  width: 8rem;
+  /* background: red; */
   
 }

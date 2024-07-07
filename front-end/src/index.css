@@ -1,39 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
-
-:root { 
-  --claim-bg: #0052ff;
-  --claim-text: #fff;
-
-  --background-color: white;
-  --text-color: black;
-  --navbar-background: #f8f9fa;
-  --navbar-text-color: black;
-
-  --navbar-bg: #fff;
-  --navbar-text: #0052ff;
-  --coin-base-links: black;
-  --sign-in-bg: #d1d1d1;
-  --sign-in-bg-hover: #c4c4c4;
-  --sign-in-text: black;
-
-  --sign-up-bg: #0052ff;
-  --sign-up-bg-hover: #004ae8;
-  --sign-up-text: #fff;
-
-  --navbar-toggler: #0052ff;
-
+:root {
+  --navbar-bg: #FFD700;
 }
 
 [data-theme="dark"] {
-  --navbar-background: #555555;
-  --navbar-text-color: #f9ebb2;
-  --navbar-logo--hover: #f7e392;
-  --navbar-logo: #f9ebb2;
-  --navbar-logo-span-text: #555555;
-  --navbar-logo-span-bg: #f9ebb2;
-
-  
+  --navbar-bg: #009E60;
 }
 
 * {
@@ -58,35 +30,6 @@ body {
       border-radius: 3px;
     }
   }
-}
-
-
-:root {
-  --claim-bg: #0052ff;
-  --claim-text: #fff;
-
-  --background-color: white;
-  --text-color: black;
-  --navbar-background: #f8f9fa;
-  --navbar-text-color: black;
-
-  --navbar-bg: #fff;
-  --navbar-text: #0052ff;
-  --coin-base-links: black;
-  --sign-in-bg: #d1d1d1;
-  --sign-in-bg-hover: #c4c4c4;
-  --sign-in-text: black;
-
-  --sign-up-bg: #0052ff;
-  --sign-up-bg-hover: #004ae8;
-  --sign-up-text: #fff;
-
-  --navbar-toggler: #0052ff;
-}
-
-[data-theme='dark'] {
-  --navbar-bg: #aa6d6d;
-  --navbar-text: #16be1e;
 }
 
 section {
