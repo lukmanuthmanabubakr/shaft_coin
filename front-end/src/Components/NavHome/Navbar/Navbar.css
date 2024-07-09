@@ -4,13 +4,86 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .navbarComponent .familyOneForNavbar{
   display: flex;
   align-items: center;
+  gap: 3rem;
 }
+.navbarComponent .NavbarItem{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 400;
+}
+.navbarComponent .NavbarItem a{
+  color: var(--navbar-text-color);
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.navbarComponent .NavbarItem a:hover{
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.navbarComponent .signUpAspect{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbarComponent .signUpAspect button{
+  background: none;
+  color: white;
+  cursor: pointer;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.navbarComponent .signUpAspect button:hover{
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.navbarComponent .signUpAspect .signUp  {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  font-weight: 500;
+  font-size: 17px;
+  border: 2px solid var(--navbar-border);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  color: var(--navbar-signUp-text);
+}
+.navbarComponent .signUpAspect .signUp:hover{
+  border: 2px solid var(--navbar-border-hover);
+  background: var( --navbar-signUp-bg);
+  color: var(--navbar-signUp-text-hover);
+  font-weight: 500;
+}
+
+ 
 .navbarComponent .familyOneForNavbar img{
   width: 8rem;
-  /* background: red; */
-  
 }

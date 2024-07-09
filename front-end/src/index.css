@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --navbar-bg: #FFD700;
+  --navbar-bg: #362756;
+  --navbar-text-color: #fff;
+  --background-image: none;
+  --navbar-border: #fff;
+  --navbar-signUp-text: #fff;
+  --navbar-border-hover: #362756;
+  --navbar-signUp-text-hover: #362756;
+  --navbar-signUp-bg: #fff;
 }
 
 [data-theme="dark"] {
-  --navbar-bg: #009E60;
+  
 }
 
 * {
@@ -35,6 +42,9 @@ body {
 section {
   margin-top: 2rem;
   height: 100vh;
+}
+button{
+  background: none;
 }
 
 a {
